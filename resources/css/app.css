@@ -1,0 +1,7 @@
+@import "global.css";
+@import "card.css";
+@import "trait.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

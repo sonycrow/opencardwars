@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "futura-light";
+    src: url("../fonts/futura-light-cd.ttf") format("truetype");
+}
+@font-face {
+    font-family: "futura-medium";
+    src: url("../fonts/futura-medium-cd.ttf") format("truetype");
+}
+@font-face {
+    font-family: "futura-bold";
+    src: url("../fonts/futura-bold-cd.ttf") format("truetype");
+}
+@font-face {
+    font-family: "futura-black";
+    src: url("../fonts/futura-black-cd-i.ttf") format("truetype");
+}
+
+span.bold {
+    font-family: "futura-black", "serif";
+    font-size: 30px;
+}
+
+span.bold-td {
+    font-family: "system-ui", "serif";
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+span.plus {
+    font-family: "arial", "serif";
+    font-size: 30px;
+    margin-left: 1px;
+    margin-right: 2px;
+}
+
+span.atk,
+span.def {
+    padding: 0 8px 0 8px;
+    line-height: 20px;
+    font-size: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+span.atk-td,
+span.def-td {
+    font-size: 14px;
+    padding: 0 4px 0 4px;
+}
+
+span.atk {
+    background-image: url("../img/icon_atk_small.png");
+}
+
+span.def {
+    background-image: url("../img/icon_def_small.png");
+}
