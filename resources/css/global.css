@@ -17,7 +17,7 @@
 
 span.bold {
     font-family: "futura-black", "serif";
-    font-size: 30px;
+    font-size: 36px;
 }
 
 span.bold-td {
@@ -37,11 +37,12 @@ span.plus {
 span.atk,
 span.def {
     padding: 0 8px 0 8px;
-    line-height: 20px;
-    font-size: 24px;
+    font-size: 28px;
+    line-height: 50px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    vertical-align: top;
 }
 
 span.atk-td,

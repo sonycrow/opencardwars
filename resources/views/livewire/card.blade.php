@@ -35,7 +35,7 @@
 
                 <div class="skill-vanguard">
                     <div class="skill-line">
-                        <div class="line">Vanguard</div>
+                        <div class="line">VANGUARD</div>
                         <div class="cost text">{{ $card['vanguard']['cost'] }}</div>
                         <div class="skills text">
                             @foreach($card['vanguard']['skills'] as $skill)
@@ -48,7 +48,7 @@
 
                 <div class="skill-center">
                     <div class="skill-line">
-                        <div class="line">Center</div>
+                        <div class="line">CENTER</div>
                         <div class="cost text">{{ $card['center']['cost'] }}</div>
                         <div class="skills text">
                             @foreach($card['center']['skills'] as $skill)
@@ -61,7 +61,7 @@
 
                 <div class="skill-rearguard">
                     <div class="skill-line">
-                        <div class="line">Rearguard</div>
+                        <div class="line">REARGUARD</div>
                         <div class="cost text">{{ $card['rearguard']['cost'] }}</div>
                         <div class="skills text">
                             @foreach($card['rearguard']['skills'] as $skill)
