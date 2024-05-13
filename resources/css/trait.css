@@ -35,7 +35,7 @@ span.trait-marksman {
     box-shadow: inset -3px 0 0 #d34545, inset 0 -3px 0 #d34545, inset 3px 0 0 #d34545, inset 0 3px 0 #d34545;
 }
 
-span.trait-tank {
+span.trait-defender {
     color: #ffffff; background-color: #65440e;
     box-shadow: inset -3px 0 0 #a28a3a, inset 0 -3px 0 #a28a3a, inset 3px 0 0 #a28a3a, inset 0 3px 0 #a28a3a;
 }

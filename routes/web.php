@@ -23,8 +23,8 @@ Route::get('/lang/{locale}', function ($locale) {
     return redirect()->back();
 });
 
-Route::get('/cards}', function () {
-    return view('cards');
+Route::get('/cards/{number?}', function ($number = null) {
+    return view('cards', [ "cardnumber" => $number ]);
 });
 
 /*

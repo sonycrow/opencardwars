@@ -8,6 +8,7 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Livewire\Component;
 
 class TableCodex extends Component
@@ -73,10 +74,11 @@ class TableCodex extends Component
         // Formateamos elementos
         foreach ($elements as &$element)
         {
+            $element['image'] = "img:/card/" . Str::lower($element['set'] . $element['number'] . '-' . $element['universe'] . '-' . $element['version'] . '-' . session('locale')) . ".jpg" . ",w:96";
             $element['name']  = CodexServiceProvider::getName($element['id'], session('locale'));
-            $element['vname'] = TranslateHelper::help($skills, $traits, CodexServiceProvider::getVanguard($element['id'], session('locale')), session('locale'));
-            $element['cname'] = TranslateHelper::help($skills, $traits, CodexServiceProvider::getCenter($element['id'], session('locale')), session('locale'));
-            $element['rname'] = TranslateHelper::help($skills, $traits, CodexServiceProvider::getRearguard($element['id'], session('locale')), session('locale'));
+            $element['vname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['vanguard']['skills'])  . CodexServiceProvider::getVanguard($element['id'], session('locale')), session('locale'));
+            $element['cname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['center']['skills'])    . CodexServiceProvider::getCenter($element['id'], session('locale')), session('locale'));
+            $element['rname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['rearguard']['skills']) . CodexServiceProvider::getRearguard($element['id'], session('locale')), session('locale'));
         }
 
         $this->elements = $this->orderElements($this->headers, $elements);
@@ -111,6 +113,18 @@ class TableCodex extends Component
         }
 
         return $final;
+    }
+
+    private function getSkills($skills): string {
+        $strSkills = null;
+
+        if ($skills) {
+            foreach ($skills as $skill) {
+                $strSkills .= "{" . $skill . "}";
+            }
+        }
+
+        return $strSkills ? trim($strSkills) . "<hr>" : "";
     }
 }
 

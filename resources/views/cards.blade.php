@@ -26,7 +26,9 @@
 
             {{-- Livewire --}}
             @foreach (\App\Providers\CodexServiceProvider::getCards() as $card)
-                @livewire('card', [ 'id' => $card['id'] ], key($card['id']))
+                @if(!$cardnumber || ($card['number'] == $cardnumber))
+                    @livewire('card', [ 'id' => $card['id'] ], key($card['id']))
+                @endif
             @endforeach
 
             <div id="cards"></div>

@@ -6,7 +6,7 @@
 {{--            <div class="art" style="background-image: url('{{ Vite::asset('resources/art/' . $card['universe'] . "/template2.jpg") }}')"></div>--}}
 
         <div class="art" style="background-image: url('{{ Vite::asset('resources/art/' . $card['universe'] . "/" . $card['id'] . ".jpg") }}')"></div>
-        <div class="border border-{{ $card['class'] }}"></div>
+{{--        <div class="border border-{{ $card['class'] }}"></div>--}}
         <div class="elements elements-{{ $card['class'] }}"></div>
 
         <div class="card-name">{{ $card['name'][$lang] }}</div>

@@ -9,7 +9,7 @@
                  x-transition:leave-end="opacity-0 transform scale-90"
                  @click="imgModal = false"
                  class="p-2 fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center bg-black bg-opacity-75">
-                <div @click.away="imgModal = true" class="flex flex-col max-w-3xl max-h-full overflow-auto">
+                <div @click.away="imgModal = true" class="flex max-w-3xl max-h-full overflow-auto">
                     <div class="z-50">
                         <button @click="imgModal = false" class="float-right pt-2 pr-2 outline-none focus:outline-none">
                             <svg class="fill-current text-white " xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
@@ -18,7 +18,7 @@
                         </button>
                     </div>
                     <div class="p-2">
-                        <img :alt="imgSrc" class="object-contain h-1/2-screen" :src="imgSrc"/>
+                        <img :alt="imgSrc" class="object-contain h-5/6" :src="imgSrc"/>
                         {{--<p x-text="imgDesc" class="text-center text-white"></p>--}}
                     </div>
                 </div>

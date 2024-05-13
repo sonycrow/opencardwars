@@ -81,9 +81,12 @@
 }
 
 .card div.hp {
-    top: 19px;
-    font-size: 48px;
-    left: 506px;
+    top: 36px;
+    left: 508px;
+    font-size: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
 }
 
 .card div.attack {

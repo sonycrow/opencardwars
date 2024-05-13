@@ -75,6 +75,7 @@
             sort(col) {
                 if (this.sortCol === col) this.sortAsc = !this.sortAsc;
                 this.sortCol = col;
+
                 this.elements.sort((a, b) => {
                     if (a[this.sortCol] < b[this.sortCol]) return this.sortAsc ? 1 : -1;
                     if (a[this.sortCol] > b[this.sortCol]) return this.sortAsc ? -1 : 1;
@@ -99,11 +100,11 @@
 
         let str = String(text);
         return str
-            .replaceAll(/img:(.*),h:(\d*),w:(\d*)/gmi, "<img src='$1' height='$2' width='$3' />")
-            .replaceAll(/img:(.*),w:(\d*),h:(\d*)/gmi, "<img src='$1' width='$2'  height='$3' />")
-            .replaceAll(/img:(.*),h:(\d*)/gmi,         "<img src='$1' height='$2' />")
-            .replaceAll(/img:(.*),w:(\d*)/gmi,         "<img src='$1' width='$2' @click=\"$dispatch('lightbox', { src: '$1' })\" class='cursor-pointer' />")
-            .replaceAll(/img:(.*)/gmi,                 "<img src='$1' />")
+            .replaceAll(/img:(.*),h:(\d*),w:(\d*)/gmi, "<img class='dt-img' src='$1' height='$2' width='$3' />")
+            .replaceAll(/img:(.*),w:(\d*),h:(\d*)/gmi, "<img class='dt-img' src='$1' width='$2'  height='$3' />")
+            .replaceAll(/img:(.*),h:(\d*)/gmi,         "<img class='dt-img' src='$1' height='$2' />")
+            .replaceAll(/img:(.*),w:(\d*)/gmi,         "<img class='dt-img' src='$1' width='$2' @click=\"$dispatch('lightbox', { src: '$1' })\" class='cursor-pointer' />")
+            .replaceAll(/img:(.*)/gmi,                 "<img class='dt-img' src='$1' />")
         ;
     }
 
