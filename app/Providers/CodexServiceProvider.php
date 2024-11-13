@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,7 +25,13 @@ class CodexServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        self::$codex = json_decode(Storage::disk('public')->get("ocw_codex.json"), true);
+        $cards = json_decode(Storage::disk('public')->get("ocw_codex.json"), true);
+        foreach ($cards as $card)
+        {
+            $card['id']   = strtolower("{$card['universe']}-{$card['set']}{$card['number']}-{$card['version']}-" . App::currentLocale());
+            $card['cost'] = self::getCost($card);
+            self::$codex[] = $card;
+        }
     }
 
     public static function getCard(string $id): array
@@ -72,4 +79,9 @@ class CodexServiceProvider extends ServiceProvider
         return self::getCard($id)['rearguard']['desc'][$lang] ?? '';
     }
 
+    public static function getCost(array $card): int
+    {
+        $value = (0.7 * $card['hp'] / 15) + (1.2 * $card['atk'] / 4) + (0.8 * $card['def'] / 1);
+        return round($value);
+    }
 }

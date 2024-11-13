@@ -1,7 +1,7 @@
 .card {
     position: relative;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-color: white;
     width: 756px;
     height: 1040px;
@@ -13,15 +13,19 @@
 }
 
 .card div.art,
+.card div.art-details,
 .card div.border,
-.card div.elements,
-.card div.elementstop {
+.card div.elements {
     position: absolute;
     width: 756px;
     height: 1040px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     border: 0;
+}
+
+.card div.art-details {
+    z-index: 15;
 }
 
 .card div.border {
@@ -31,10 +35,6 @@
 .card div.elements {
     background-image: url("../img/card_elements_black.png");
 }
-
-/*.card div.elements-tank {*/
-/*    background-image: url("../img/card_elements_tank.png");*/
-/*}*/
 
 .card div.card-name {
     position: absolute;
@@ -53,7 +53,7 @@
     position: absolute;
     display: flex;
     justify-content: flex-end;
-    top: 80px;
+    top: 84px;
     width: 500px;
     color: white;
     font-size: 16px;
@@ -81,9 +81,9 @@
 }
 
 .card div.hp {
-    top: 36px;
-    left: 508px;
-    font-size: 40px;
+    top: 37px;
+    left: 505px;
+    font-size: 48px;
     line-height: 40px;
     color: #ffffff;
     text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
@@ -106,7 +106,7 @@
 
 .card div.skill-group div.skill-container {
     width: 726px;
-    margin-bottom: 36px;
+    margin-bottom: 56px;
     margin-top: auto;
 }
 
@@ -124,12 +124,12 @@
 .card div.skill-rearguard div.skill-line {
     position: relative;
     height: 56px;
-    line-height: 55px;
+    line-height: 58px;
     background-repeat: no-repeat;
     background-position: top 1px right 448px;
     width: 730px;
     padding-left: 36px;
-    z-index: 22;
+    z-index: 20;
 }
 
 .card div.skill-vanguard div.skill-line  { background-image: url("../img/card_vanguard.png"); }
@@ -155,35 +155,51 @@
 }
 
 .card div.skill-line div.skills span {
-    font-size: 24px;
-    border-radius: 14px;
+    font-size: 22px;
+    border-radius: 12px;
+    border-width: 2px;
 }
 
-.card div.skill-description {
+.card div.skill-description,
+.card div.skill-description-back {
     position: relative;
     margin-top: -24px;
-    z-index: 20;
+    width: 726px;
 }
 
-.card div.skill-description div.text {
+.card div.skill-description div.text,
+.card div.skill-description-back div.text {
     font-size: 40px;
     line-height: 46px;
     font-family: "futura-light", "serif";
     margin-left: 32px;
-    /*background-color: rgb(255, 255, 255, 0.3);*/
-    background-color: rgb(0, 0, 0, 0.5);
     border-radius: 0 10px 10px 10px;
     padding: 24px 10px 10px 10px;
-    box-shadow: 0 0 10px 2px rgba(255,255,255,0.3);
     text-shadow:
         0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000,
         0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
+}
+
+.card div.skill-description {
+    z-index: 20;
+}
+
+.card div.skill-description-back {
+    position: absolute;
+}
+
+.card div.skill-description-back div.text {
+    background-color: rgb(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 2px rgba(255,255,255,0.3);
+    color: transparent;
+    text-shadow: none;
 }
 
 .card div.skill-traits {
     position: relative;
     margin-bottom: 8px;
     padding-left: 32px;
+    z-index: 20;
 }
 
 .card div.cardnumber {
@@ -191,8 +207,8 @@
     color: white;
     font-family: "futura-light", "serif";
     font-size: 18px;
-    top: 1000px;
-    width: 730px;
+    top: 990px;
+    width: 724px;
     text-align: right;
     text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
 }

@@ -7,7 +7,9 @@ use App\Providers\CodexServiceProvider;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\Str;
 use Livewire\Component;
 
@@ -48,10 +50,13 @@ class TableCodex extends Component
         $this->headers = array(
             array("key" => "id",       "value" => "ID"),
             array("key" => "image",    "value" => "Image"),
+//            array("key" => "code",     "value" => "Code"),
             array("key" => "name",     "value" => "Name"),
-            array("key" => "set",      "value" => "Set"),
-            array("key" => "number",   "value" => "Number"),
-            array("key" => "universe", "value" => "Universe"),
+            array("key" => "class",    "value" => "Class"),
+//            array("key" => "set",      "value" => "Set"),
+//            array("key" => "number",   "value" => "Number"),
+//            array("key" => "universe", "value" => "Universe"),
+            array("key" => "hp",       "value" => "HP"),
             array("key" => "atk",      "value" => "Attack"),
             array("key" => "def",      "value" => "Defense"),
             array("key" => "cost",     "value" => "Cost"),
@@ -74,11 +79,12 @@ class TableCodex extends Component
         // Formateamos elementos
         foreach ($elements as &$element)
         {
-            $element['image'] = "img:/card/" . Str::lower($element['set'] . $element['number'] . '-' . $element['universe'] . '-' . $element['version'] . '-' . session('locale')) . ".jpg" . ",w:96";
-            $element['name']  = CodexServiceProvider::getName($element['id'], session('locale'));
-            $element['vname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['vanguard']['skills'])  . CodexServiceProvider::getVanguard($element['id'], session('locale')), session('locale'));
-            $element['cname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['center']['skills'])    . CodexServiceProvider::getCenter($element['id'], session('locale')), session('locale'));
-            $element['rname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['rearguard']['skills']) . CodexServiceProvider::getRearguard($element['id'], session('locale')), session('locale'));
+            $element['code']  = $element['id'];
+            $element['name']  = CodexServiceProvider::getName($element['id'], App::currentLocale());
+            $element['image'] = "img:" . Vite::asset("resources/card/{$element['universe']}/{$element['id']}.jpg") . ",w:64";
+            $element['vname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['vanguard']['skills'])  . CodexServiceProvider::getVanguard($element['id'], App::currentLocale()), App::currentLocale());
+            $element['cname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['center']['skills'])    . CodexServiceProvider::getCenter($element['id'], App::currentLocale()), App::currentLocale());
+            $element['rname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['rearguard']['skills']) . CodexServiceProvider::getRearguard($element['id'], App::currentLocale()), App::currentLocale());
         }
 
         $this->elements = $this->orderElements($this->headers, $elements);

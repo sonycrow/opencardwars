@@ -3,75 +3,54 @@
 /*==============================*/
 span.skill,
 span.trait {
-    font-size: 26px;
+    font-size: 25px;
     line-height: 20px;
     font-family: "futura-bold", "serif";
     text-transform: uppercase;
-    border-radius: 14px;
+    border-radius: 12px;
     padding: 0 12px 0 12px;
+    margin: 0 3px 0 3px;
     white-space: nowrap;
     text-shadow: none;
-    color: black; background-color: white;
-    box-shadow: inset -4px 0 0 #000000, inset 0 -4px 0 #000000, inset 4px 0 0 #000000, inset 0 4px 0 #000000;
+    color: black; border: 2px solid black; background-color: white;
+    box-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
+
+span.trait {
+    color: white; border: 2px solid white; background-color: black;
+    box-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
 }
 
 span.skill-td,
 span.trait-td {
-    border-radius: 6px;
-    font-size: 17px;
-    box-shadow: inset -2px 0 0 #000000, inset 0 -2px 0 #000000, inset 2px 0 0 #000000, inset 0 2px 0 #000000;
-}
-
-span.trait {
-    color: white; background-color: black;
-    box-shadow: inset -3px 0 0 #ffffff, inset 0 -3px 0 #ffffff, inset 3px 0 0 #ffffff, inset 0 3px 0 #ffffff;
+    border-radius: 8px;
+    border-width: 2px;
+    font-size: 16px;
+    box-shadow: none;
 }
 
 /*==============================*/
 /*       TRAITS DE CLASES       */
 /*==============================*/
-span.trait-marksman {
-    color: #ffffff; background-color: #a91212;
-    box-shadow: inset -3px 0 0 #d34545, inset 0 -3px 0 #d34545, inset 3px 0 0 #d34545, inset 0 3px 0 #d34545;
-}
-
-span.trait-defender {
-    color: #ffffff; background-color: #65440e;
-    box-shadow: inset -3px 0 0 #a28a3a, inset 0 -3px 0 #a28a3a, inset 3px 0 0 #a28a3a, inset 0 3px 0 #a28a3a;
-}
-
-span.trait-caster {
-    color: #ffffff; background-color: #1156d7;
-    box-shadow: inset -3px 0 0 #447ae0, inset 0 -3px 0 #447ae0, inset 3px 0 0 #447ae0, inset 0 3px 0 #447ae0;
-}
-
-span.trait-support   {
-    color: #ffffff; background-color: #316b1e;
-    box-shadow: inset -3px 0 0 #5fa246, inset 0 -3px 0 #5fa246, inset 3px 0 0 #5fa246, inset 0 3px 0 #5fa246;
-}
-
-span.trait-fighter   {
-    color: #ffffff; background-color: #a19b0a;
-    box-shadow: inset -3px 0 0 #ded71f, inset 0 -3px 0 #ded71f, inset 3px 0 0 #ded71f, inset 0 3px 0 #ded71f;
-}
-
-span.trait-assassin  {
-    color: #ffffff; background-color: #6d098f;
-    box-shadow: inset -3px 0 0 #9a23cb, inset 0 -3px 0 #9a23cb, inset 3px 0 0 #9a23cb, inset 0 3px 0 #9a23cb;
-}
+span.trait-marksman { background-color: #930f0f; }
+span.trait-defender { background-color: #65440e; }
+span.trait-caster   { background-color: #1156d7; }
+span.trait-support  { background-color: #316b1e; }
+span.trait-fighter  { background-color: #a6a006; }
+span.trait-assassin { background-color: #6d098f; }
 
 /*==============================*/
 /*       TRAITS ESPECIALES      */
 /*==============================*/
 span.trait-character {
-    color: #ffffff; background-color: #646464;
-    box-shadow: inset -3px 0 0 #b9b9b9, inset 0 -3px 0 #b9b9b9, inset 3px 0 0 #b9b9b9, inset 0 3px 0 #b9b9b9;
+    color: white; border: 2px solid white; background-color: #646464;
+    box-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
 }
 
 /*==============================*/
 /*            SKILLS            */
 /*==============================*/
 span.skill-ultimate {
-    color: #ffffff; background-color: #e30606;
-    box-shadow: inset -3px 0 0 #f5f5f5, inset 0 -3px 0 #f5f5f5, inset 3px 0 0 #f5f5f5, inset 0 3px 0 #f5f5f5;
+    color: white; border: 2px solid white; background-color: #e30606;
+    box-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
 }
