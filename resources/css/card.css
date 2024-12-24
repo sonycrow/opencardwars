@@ -28,13 +28,13 @@
     z-index: 15;
 }
 
-.card div.border {
-    background-image: url("../img/card_border.png");
-}
-
-.card div.elements {
-    background-image: url("../img/card_elements_black.png");
-}
+.card div.elements          { background-image: url("../img/card_elements_black.png"); }
+.card div.elements-marksman { background-image: url("../img/card_elements_black.png"); }
+.card div.elements-defender { background-image: url("../img/card_elements_tank.png"); }
+.card div.elements-caster   { background-image: url("../img/card_elements_black.png"); }
+.card div.elements-support  { background-image: url("../img/card_elements_black.png"); }
+.card div.elements-fighter  { background-image: url("../img/card_elements_black.png"); }
+.card div.elements-assassin { background-image: url("../img/card_elements_black.png"); }
 
 .card div.card-name {
     position: absolute;

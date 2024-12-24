@@ -3,12 +3,9 @@
          data-cardid="{{ $card['id'] }}"
          data-number="{{ $card['number'] }}">
 
-{{--            <div class="art" style="background-image: url('{{ Vite::asset('resources/art/' . $card['universe'] . "/template2.jpg") }}')"></div>--}}
-
         <div class="art" style="background-image: url('{{ Vite::asset('resources/art/' . $card['universe'] . "/" . Str::lower($card['universe'] . '-' . $card['set'] . $card['number'] . '-' . $card['version']) . ".jpg") }}')"></div>
 {{--        <div class="art-details" style="background-image: url('{{ Vite::asset('resources/art/' . $card['universe'] . "/" . Str::lower($card['universe'] . '-' . $card['set'] . $card['number'] . '-' . $card['version']) . ".png") }}')"></div>--}}
 
-{{--        <div class="border border-{{ $card['class'] }}"></div>--}}
         <div class="elements elements-{{ $card['class'] }}"></div>
 
         <div class="card-name">{{ $card['name'][$lang] }}</div>
