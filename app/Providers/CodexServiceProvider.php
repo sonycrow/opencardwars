@@ -28,8 +28,8 @@ class CodexServiceProvider extends ServiceProvider
         $cards = json_decode(Storage::disk('public')->get("ocw_codex.json"), true);
         foreach ($cards as $card)
         {
-            $card['id']   = strtolower("{$card['universe']}-{$card['set']}{$card['number']}-{$card['version']}-" . App::currentLocale());
-            $card['cost'] = self::getCost($card);
+            $card['id']    = strtolower("{$card['universe']}-{$card['set']}{$card['number']}-{$card['version']}-" . App::currentLocale());
+            $card['cost']  = $card['cost'] ?? self::getCost($card);
             self::$codex[] = $card;
         }
     }
@@ -78,10 +78,15 @@ class CodexServiceProvider extends ServiceProvider
     {
         return self::getCard($id)['rearguard']['desc'][$lang] ?? '';
     }
+    
+    public static function getExtra(string $id, string $lang): string
+    {
+        return self::getCard($id)['extra']['desc'][$lang] ?? '';
+    }
 
     public static function getCost(array $card): int
     {
-        $value = (0.7 * $card['hp'] / 15) + (1.2 * $card['atk'] / 4) + (0.8 * $card['def'] / 1);
+        $value = (0.7 * $card['hp'] / 10) + (1.2 * $card['atk'] / 4) + (0.8 * $card['def'] / 1);
         return round($value);
     }
 }

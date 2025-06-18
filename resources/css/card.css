@@ -29,8 +29,9 @@
 }
 
 .card div.elements          { background-image: url("../img/card_elements_black.png"); }
+.card div.elements-equip    { background-image: url("../img/card_elements_equip_title.png"); }
 .card div.elements-marksman { background-image: url("../img/card_elements_black.png"); }
-.card div.elements-defender { background-image: url("../img/card_elements_tank.png"); }
+.card div.elements-defender { background-image: url("../img/card_elements_black.png"); }
 .card div.elements-caster   { background-image: url("../img/card_elements_black.png"); }
 .card div.elements-support  { background-image: url("../img/card_elements_black.png"); }
 .card div.elements-fighter  { background-image: url("../img/card_elements_black.png"); }
@@ -112,7 +113,8 @@
 
 .card div.skill-vanguard,
 .card div.skill-center,
-.card div.skill-rearguard {
+.card div.skill-rearguard,
+.card div.skill-extra {
     color: white;
     font-size: 30px;
     text-shadow: 0 0 8px #000, 0 0 8px #000;
@@ -121,7 +123,8 @@
 
 .card div.skill-vanguard div.skill-line,
 .card div.skill-center div.skill-line,
-.card div.skill-rearguard div.skill-line {
+.card div.skill-rearguard div.skill-line,
+.card div.skill-extra div.skill-line {
     position: relative;
     height: 56px;
     line-height: 58px;
@@ -135,6 +138,7 @@
 .card div.skill-vanguard div.skill-line  { background-image: url("../img/card_vanguard.png"); }
 .card div.skill-center div.skill-line    { background-image: url("../img/card_center.png"); }
 .card div.skill-rearguard div.skill-line { background-image: url("../img/card_rearguard.png"); }
+.card div.skill-extra div.skill-line     { background-image: url("../img/card_extra.png"); }
 
 .card div.skill-line div.line {
     display: inline-block;
@@ -217,4 +221,63 @@
     font-size: 20px;
     border-radius: 12px;
     margin-right: 10px;
+}
+
+/* CARD EQUIP */
+.card div.skill-group div.skill-container-equip {
+    margin-bottom: 180px;
+}
+
+.card div.elements-equip div.card-name {
+    text-align: center;
+    width: 756px;
+    left: auto;
+}
+
+.card div.elements-equip div.card-cost {
+    width: 612px;
+}
+
+.card div.stats-equip {
+    position: absolute;
+    width: 756px;
+    height: 126px;
+    border: 0;
+    top: 862px;
+    background-position: top;
+    background-image: url("../img/card_elements_equip.png");
+}
+
+.card div.stats-equip span.equip-plus {
+    font-size: 34px;
+    font-weight: 900;
+    margin-right: -6px;
+    vertical-align: middle;
+    line-height: 0px;
+}
+
+.card div.stats-equip div.name {
+    color: #2c2c2c;
+    padding-top: 11px;
+    font-size: 28px;
+    font-family: "futura-bold", "serif";
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff;
+}
+
+.card div.stats-equip div.attack,
+.card div.stats-equip div.defense {
+    top: 6px;
+    font-size: 74px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.card div.stats-equip div.attack {
+    left: 46px;
+}
+
+.card div.stats-equip div.defense {
+    left: 644px;
 }

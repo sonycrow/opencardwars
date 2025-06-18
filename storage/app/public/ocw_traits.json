@@ -1,0 +1,72 @@
+[
+    {
+        "code": "character",
+        "name": {
+            "en": "character",
+            "es": "personaje"
+        }
+    },
+    {
+        "code": "equip",
+        "name": {
+            "en": "equip",
+            "es": "equipo"
+        }
+    },
+    {
+        "code": "magic dmg",
+        "name": {
+            "en": "magic damage",
+            "es": "daño mágico"
+        }
+    },
+    {
+        "code": "physical dmg",
+        "name": {
+            "en": "physical damage",
+            "es": "daño físico"
+        }
+    },
+    {
+        "code": "marksman",
+        "name": {
+            "en": "marksman",
+            "es": "tirador"
+        }
+    },
+    {
+        "code": "defender",
+        "name": {
+            "en": "defender",
+            "es": "defensor"
+        }
+    },
+    {
+        "code": "caster",
+        "name": {
+            "en": "caster",
+            "es": "mago"
+        }
+    },
+    {
+        "code": "support",
+        "name": {
+            "en": "support",
+            "es": "soporte"
+        }
+    },
+    {
+        "code": "fighter",
+        "name": {
+            "en": "fighter",
+            "es": "luchador"
+        }
+    },
+    {
+        "code": "assassin",
+        "name": {
+            "en": "assassin",
+            "es": "asesino"
+        }
+    }
+]

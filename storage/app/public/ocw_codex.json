@@ -1,0 +1,659 @@
+[
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "001",
+        "version": 1,
+        "name": {
+            "es": "Ashra",
+            "en": ""
+        },
+        "type": "character",
+        "class": "marksman",
+        "hp": 10,
+        "atk": 4,
+        "def": 1,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": "2+",
+            "desc": {
+                "es": "Gana +2#atk# hasta el final del turno.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": "4+",
+            "desc": {
+                "es": "Lanza un cono de flechas causando su daño de #atk# al primer objetivo de todas las líneas enemigas.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["ultimate"],
+            "cost": "5+",
+            "desc": {
+                "es": "Dispara una *flecha de hielo* a un objetivo de su misma línea, causando {triple damage} y aplicando {stun}.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "002",
+        "version": 1,
+        "name": {
+            "es": "Sorgar",
+            "en": ""
+        },
+        "type": "character",
+        "class": "defender",
+        "hp": 18,
+        "atk": 2,
+        "def": 2,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": "2+",
+            "desc": {
+                "es": "Activa {shield 1} hasta el inicio de tu siguiente turno.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": "3+",
+            "desc": {
+                "es": "Obtiene +2#def# hasta el inicio de tu siguiente turno.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["ultimate"],
+            "cost": "5+",
+            "desc": {
+                "es": "Debe {advance 2}. Luego, obtiene +4#atk# y realiza un ataque {unstoppable} al primer objetivo de su misma línea.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "003",
+        "version": 1,
+        "name": {
+            "es": "Rhyse",
+            "en": ""
+        },
+        "type": "character",
+        "class": "caster",
+        "hp": 12,
+        "atk": 4,
+        "def": 1,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["reach"],
+            "cost": "2+",
+            "desc": {
+                "es": "Lanza una bola de energía a un objetivo de su misma línea que causa la mitad de su valor de #atk# a él y a todos los [character] adyacentes.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": "3+",
+            "desc": {
+                "es": "Activa {prison} sobre el primer [character] enemigo de su misma línea hasta el inicio de su próximo turno.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [
+                "ultimate",
+                "flash"
+            ],
+            "cost": "5+",
+            "desc": {
+                "es": "Invoca un portal y puede {move} a cualquier [character] adyacente a cualquier posición del campo de batalla (incluido él).",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "004",
+        "version": 1,
+        "name": {
+            "es": "Sorelia",
+            "en": ""
+        },
+        "type": "character",
+        "class": "support",
+        "hp": 12,
+        "atk": 3,
+        "def": 0,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["flash"],
+            "cost": "3+",
+            "desc": {
+                "es": "Realiza {heal 4} al [character] de su misma línea ubicado en retaguardia.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": ["flash"],
+            "cost": "3+",
+            "desc": {
+                "es": "Realiza {heal 4} al [character] de su misma línea ubicado en vanguardia.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [
+                "ultimate",
+                "flash"
+            ],
+            "cost": "5+",
+            "desc": {
+                "es": "Realiza {heal 6} a un [character] aliado objetivo.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "005",
+        "version": 1,
+        "name": {
+            "es": "Jaxar",
+            "en": ""
+        },
+        "type": "character",
+        "class": "fighter",
+        "hp": 15,
+        "atk": 3,
+        "def": 1,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": "3+",
+            "desc": {
+                "es": "Carga su *arma* y obtiene {double damage}.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [
+                "ultimate",
+                "flash"
+            ],
+            "cost": "4+",
+            "desc": {
+                "es": "Obtiene {dodge} y {counterattack} hasta el final del turno.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["reach"],
+            "cost": "4+",
+            "desc": {
+                "es": "Carga su *arma* y salta hacia un objetivo de su misma línea, obtienendo +2#atk#.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "006",
+        "version": 1,
+        "name": {
+            "es": "Zeph",
+            "en": ""
+        },
+        "type": "character",
+        "class": "assassin",
+        "hp": 10,
+        "atk": 5,
+        "def": 0,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["ultimate"],
+            "cost": "5+",
+            "desc": {
+                "es": "Se lanza contra un objetivo y le deja una marca. Obtiene {triple attack} en el objetivo marcado. ",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": "4+",
+            "desc": {
+                "es": "Coloca una *sombra* en una posición vacía del campo enemigo y hace un corte circular causando su daño de #atk# a todos los [character] adyacentes.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [],
+            "cost": "4+",
+            "desc": {
+                "es": "Cuando realiza un ataque, si este causa daño invoca una *sombra* que vuelve a realizar otro ataque al mismo objetivo.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "007",
+        "version": 1,
+        "name": {
+            "es": "Vylar",
+            "en": ""
+        },
+        "type": "character",
+        "class": "fighter",
+        "hp": 14,
+        "atk": 3,
+        "def": 1,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["flash"],
+            "cost": "3+",
+            "desc": {
+                "es": "Gana +2#atk# y realiza un ataque que causa {stun} a un objetivo de su misma línea.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": ["ultimate"],
+            "cost": "5+",
+            "desc": {
+                "es": "Cuando realiza un ataque, si el objetivo muere puede ejecutar una habilidad que no sea {ultimate} de ese objetivo pagando su coste.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [],
+            "cost": "4+",
+            "desc": {
+                "es": "Cuando realiza un ataque, gana {move} y puede volver a realizar otro ataque.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "008",
+        "version": 1,
+        "name": {
+            "es": "Cassara",
+            "en": ""
+        },
+        "type": "character",
+        "class": "caster",
+        "hp": 13,
+        "atk": 3,
+        "def": 1,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["ultimate"],
+            "cost": "5+",
+            "desc": {
+                "es": "Convierte en piedra y causa {stun} y {poison 2} al primer personaje de todas las líneas enemigas.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": ["reach"],
+            "cost": "2+",
+            "desc": {
+                "es": "Cuando realiza un ataque, causa {poison 1} al [character] objetivo.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["reach"],
+            "cost": "4+",
+            "desc": {
+                "es": "Causa {silence} y {poison 1} a todos los [character] de su misma línea.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "009",
+        "version": 1,
+        "name": {
+            "es": "Jhade",
+            "en": ""
+        },
+        "type": "character",
+        "class": "marksman",
+        "hp": 14,
+        "atk": 4,
+        "def": 0,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": "3+",
+            "desc": {
+                "es": "Dispara una *bala* que atraviesa a todos los [character] de su misma línea. Distribuye el daño del ataque entre todos los objetivos como quieras.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": "3+",
+            "desc": {
+                "es": "Coloca una *Flor de Lotto* en un espacio enemigo vacío. Cuando un [character] entra en esa posición recibe 5 puntos de daño.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [
+                "ultimate",
+                "reach"
+            ],
+            "cost": "5+",
+            "desc": {
+                "es": "Carga su *arma* y gana {triple attack}.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "010",
+        "version": 1,
+        "name": {
+            "es": "Fyx",
+            "en": ""
+        },
+        "type": "character",
+        "class": "assassin",
+        "hp": 12,
+        "atk": 5,
+        "def": 0,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["flash"],
+            "cost": "3+",
+            "desc": {
+                "es": "Se sube a su *tridente* y gana {invulnerable} contra el ataque o habilidad que reciba.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": "4+",
+            "desc": {
+                "es": "Carga su *tridente* y gana {double damage} e {unstoppable} en su próximo ataque.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [
+                "ultimate",
+                "reach"
+            ],
+            "cost": "5+",
+            "desc": {
+                "es": "Invoca a un tiburón gigante y realiza un ataque en la ubicación de un objetivo y gana +2#atk#. Distribuye el daño como quieras entre el objetivo y todos los [character] adyacentes.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "011",
+        "version": 1,
+        "name": {
+            "es": "Malrock",
+            "en": ""
+        },
+        "type": "character",
+        "class": "defender",
+        "hp": 16,
+        "atk": 1,
+        "def": 3,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": "2+",
+            "desc": {
+                "es": "Obtiene {shield 1} y gana +1#def# hasta el inicio de tu siguiente turno.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": "3+",
+            "desc": {
+                "es": "Obtiene {taunt} y gana +2#def# hasta el inicio de tu siguiente turno.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["ultimate"],
+            "cost": "5+",
+            "desc": {
+                "es": "Libera una onda de choque en un objetivo causando {stun}. Luego causa su daño de #atk# a todos los [character] adyacentes, incluido el objetivo.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "012",
+        "version": 1,
+        "name": {
+            "es": "Luma",
+            "en": ""
+        },
+        "type": "character",
+        "class": "support",
+        "hp": 14,
+        "atk": 1,
+        "def": 1,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["flash"],
+            "cost": "3+",
+            "desc": {
+                "es": "Realiza {heal 2} a un [character] aliado y le otorga {dodge} hasta el final del turno.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": ["reach"],
+            "cost": "3+",
+            "desc": {
+                "es": "Causa {silence} a un [character] enemigo de su misma línea y reduce su #atk# en 2 hasta el final del turno.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [
+                "ultimate",
+                "flash"
+            ],
+            "cost": "5+",
+            "desc": {
+                "es": "Realiza {heal 4} a un [character] aliado y gana +2#atk# y +2#def#, hasta el final del turno.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "013",
+        "version": 1,
+        "name": {
+            "es": "Arco de fuego",
+            "en": ""
+        },
+        "type": "equip",
+        "class": "marksman",
+        "cost": 3,
+        "hp": 0,
+        "atk": 2,
+        "def": 0,
+        "extra": {
+            "skills": [
+                "reach",
+                "flash"
+            ],
+            "cost": "5+",
+            "desc": {
+                "es": "Causa la mitad del daño a todos los [character] adyacentes al objetivo atacado.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "014",
+        "version": 1,
+        "name": {
+            "es": "Escudo de Aegir",
+            "en": ""
+        },
+        "type": "equip",
+        "class": "defender",
+        "cost": 3,
+        "hp": 0,
+        "atk": 0,
+        "def": 2,
+        "extra": {
+            "skills": ["flash"],
+            "cost": "5+",
+            "desc": {
+                "es": "Si la vida del [character] equipado baja a 1 o menos, este gana {invulnerable} hasta el final del turno. Su vida queda en 1.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "015",
+        "version": 1,
+        "name": {
+            "es": "Bastón de Noctavoris",
+            "en": ""
+        },
+        "type": "equip",
+        "class": "caster",
+        "cost": 3,
+        "hp": 0,
+        "atk": 2,
+        "def": 0,
+        "extra": {
+            "skills": ["flash"],
+            "cost": "4+",
+            "desc": {
+                "es": "El daño que hace el [character] equipado ignora la armadura y no puede ser reducido.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "016",
+        "version": 1,
+        "name": {
+            "es": "Sombra Quebravidas ",
+            "en": ""
+        },
+        "type": "equip",
+        "class": "assassin",
+        "cost": 3,
+        "hp": 0,
+        "atk": 1,
+        "def": 0,
+        "extra": {
+            "skills": ["flash"],
+            "cost": "5+",
+            "desc": {
+                "es": "Cuando ataque a un [character] de su misma línea y cause daño, puede {move} inmediatamente a cualquier espacio vacío y realizar un segundo ataque.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "017",
+        "version": 1,
+        "name": {
+            "es": "Garras de Brann-Korr",
+            "en": ""
+        },
+        "type": "equip",
+        "class": "fighter",
+        "cost": 3,
+        "hp": 0,
+        "atk": 2,
+        "def": 0,
+        "extra": {
+            "skills": ["reach"],
+            "cost": "5+",
+            "desc": {
+                "es": "Realiza un ataque con {trample}. Si el ataque elimina a un enemigo, puede realizar un segundo ataque inmediatamente.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "018",
+        "version": 1,
+        "name": {
+            "es": "Campana de Eclipsia",
+            "en": ""
+        },
+        "type": "equip",
+        "class": "support",
+        "cost": 3,
+        "hp": 0,
+        "atk": 0,
+        "def": 1,
+        "extra": {
+            "skills": ["flash"],
+            "cost": "4+",
+            "desc": {
+                "es": "Aplica {silence} a un [character] enemigo que haya activado una habilidad este turno y anula su efecto. Luego, un [character] aliado de tu elección gana {counterattack} hasta el final del turno.",
+                "en": ""
+            }
+        }
+    }
+]

@@ -23,7 +23,7 @@
             <div class="skill-container">
 
                 <div class="skill-traits text">
-                    [{{ $card['class'] }}]&nbsp;
+                    [{{ $card['class_text'] }}]&nbsp;
                     @foreach($card['traits'] as $trait)
                         [{{ $trait }}]&nbsp;
                     @endforeach
@@ -78,7 +78,7 @@
         </div>
 
         <div class="cardnumber text">
-            [{{ $card['type'] }}]
+            [{{ $card['type_text'] }}]
             OPEN CARD WARS {{ Str::upper($card['id']) }}</div>
 
     </div>

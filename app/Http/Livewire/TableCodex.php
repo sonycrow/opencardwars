@@ -63,6 +63,7 @@ class TableCodex extends Component
             array("key" => "vname",    "value" => "Vanguard"),
             array("key" => "cname",    "value" => "Center"),
             array("key" => "rname",    "value" => "Rearguard"),
+            array("key" => "ename",    "value" => "Extra"),
         );
     }
 
@@ -82,9 +83,16 @@ class TableCodex extends Component
             $element['code']  = $element['id'];
             $element['name']  = CodexServiceProvider::getName($element['id'], App::currentLocale());
             $element['image'] = "img:" . Vite::asset("resources/card/{$element['universe']}/{$element['id']}.jpg") . ",w:64";
-            $element['vname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['vanguard']['skills'])  . CodexServiceProvider::getVanguard($element['id'], App::currentLocale()), App::currentLocale());
-            $element['cname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['center']['skills'])    . CodexServiceProvider::getCenter($element['id'], App::currentLocale()), App::currentLocale());
-            $element['rname'] = TranslateHelper::help($skills, $traits, $this->getSkills($element['rearguard']['skills']) . CodexServiceProvider::getRearguard($element['id'], App::currentLocale()), App::currentLocale());
+
+            $vname = isset($element['vanguard'])  ? $element['vanguard']['skills']  : null;
+            $cname = isset($element['center'])    ? $element['center']['skills']    : null;
+            $rname = isset($element['rearguard']) ? $element['rearguard']['skills'] : null;
+            $ename = isset($element['extra'])     ? $element['extra']['skills']     : null;
+
+            $element['vname'] = TranslateHelper::help($skills, $traits, $this->getSkills($vname) . CodexServiceProvider::getVanguard($element['id'], App::currentLocale()), App::currentLocale());
+            $element['cname'] = TranslateHelper::help($skills, $traits, $this->getSkills($cname) . CodexServiceProvider::getCenter($element['id'], App::currentLocale()), App::currentLocale());
+            $element['rname'] = TranslateHelper::help($skills, $traits, $this->getSkills($rname) . CodexServiceProvider::getRearguard($element['id'], App::currentLocale()), App::currentLocale());
+            $element['ename'] = TranslateHelper::help($skills, $traits, $this->getSkills($ename) . CodexServiceProvider::getExtra($element['id'], App::currentLocale()), App::currentLocale());
         }
 
         $this->elements = $this->orderElements($this->headers, $elements);

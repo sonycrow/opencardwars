@@ -1,0 +1,288 @@
+[
+    {
+        "code": "advance x",
+        "name": {
+            "en": "advance x",
+            "es": "avanzar x"
+        },
+        "desc": {
+            "en": "",
+            "es": "Avanza en tu misma línea tantos espacios como indique X."
+        }
+    },
+    {
+        "code": "shield x",
+        "name": {
+            "en": "shield x",
+            "es": "escudo x"
+        },
+        "desc": {
+            "en": "",
+            "es": "Bloquea completamente el daño de X ataques básicos y/o de habilidades. No bloquea ataques {unstoppable}."
+        }
+    },
+    {
+        "code": "prison",
+        "name": {
+            "en": "prison",
+            "es": "prisión"
+        },
+        "desc": {
+            "en": "",
+            "es": "El objetivo con {prison} no puede realizar ataques ni cambiar de ubicación, pero su puede activar habilidades."
+        }
+    },
+    {
+        "code": "move",
+        "name": {
+            "en": "move",
+            "es": "mover"
+        },
+        "desc": {
+            "en": "",
+            "es": "Permite mover a cualquier posición válida del campo de batalla a un objetivo."
+        }
+    },
+    {
+        "code": "heal x",
+        "name": {
+            "en": "heal x",
+            "es": "curar x"
+        },
+        "desc": {
+            "en": "",
+            "es": "Recupera X puntos de vida de un objetivo."
+        }
+    },
+    {
+        "code": "double damage",
+        "name": {
+            "en": "double damage",
+            "es": "doble daño"
+        },
+        "desc": {
+            "en": "",
+            "es": "Cuando realiza un ataque, si este causa daño hará el doble de ese daño."
+        }
+    },
+    {
+        "code": "triple damage",
+        "name": {
+            "en": "triple damage",
+            "es": "triple daño"
+        },
+        "desc": {
+            "en": "",
+            "es": "Cuando realiza un ataque, si este causa daño hará el triple de ese daño."
+        }
+    },
+    {
+        "code": "double attack",
+        "name": {
+            "en": "double attack",
+            "es": "doble ataque"
+        },
+        "desc": {
+            "en": "",
+            "es": "Realiza 2 ataques completos, resolviendo toda la fase de combate 2 veces. Los ataques pueden realizarse a cualquier objetivo válido."
+        }
+    },
+    {
+        "code": "triple attack",
+        "name": {
+            "en": "triple attack",
+            "es": "triple ataque"
+        },
+        "desc": {
+            "en": "",
+            "es": "Realiza 3 ataques completos, resolviendo toda la fase de combate 3 veces. Los ataques pueden realizarse a cualquier objetivo válido."
+        }
+    },
+    {
+        "code": "dodge",
+        "name": {
+            "en": "dodge",
+            "es": "esquiva"
+        },
+        "desc": {
+            "en": "",
+            "es": "Esquiva el daño recibido de ataques básicos."
+        }
+    },
+    {
+        "code": "ultimate",
+        "name": {
+            "en": "ultimate",
+            "es": "definitiva"
+        },
+        "desc": {
+            "en": "",
+            "es": "Es la habilidad más poderosa de un [character]."
+        }
+    },
+    {
+        "code": "reach",
+        "name": {
+            "en": "reach",
+            "es": "alcance"
+        },
+        "desc": {
+            "en": "",
+            "es": "{reach} permite atacar a cualquier objetivo de su misma línea."
+        }
+    },
+    {
+        "code": "flash",
+        "name": {
+            "en": "flash",
+            "es": "destello"
+        },
+        "desc": {
+            "en": "",
+            "es": "Una habilidad con {flash} puede activarse en cualquier momento, incluso en el turno del contrario."
+        }
+    },
+    {
+        "code": "counterattack",
+        "name": {
+            "en": "counterattack",
+            "es": "contraataque"
+        },
+        "desc": {
+            "en": "",
+            "es": "Cuando un objetivo con {counterattack} es atacado, este realiza inmediatamente un ataque, aunque no sea su turno."
+        }
+    },
+    {
+        "code": "unstoppable",
+        "name": {
+            "en": "unstoppable",
+            "es": "imparable"
+        },
+        "desc": {
+            "en": "",
+            "es": "Un ataque {unstoppable} no puede ser bloquedao ni reducido."
+        }
+    },
+    {
+        "code": "invulnerable",
+        "name": {
+            "en": "invulnerable",
+            "es": "invulnerable"
+        },
+        "desc": {
+            "en": "",
+            "es": "Un personaje {invulnerable} no puede ser objetivo de ataque ni habilidades de ningún tipo."
+        }
+    },
+    {
+        "code": "stun",
+        "name": {
+            "en": "stun",
+            "es": "aturdir"
+        },
+        "desc": {
+            "en": "",
+            "es": "Un objetivo con {stun} no puede realizar ningúna acción hasta su siguiente turno."
+        }
+    },
+    {
+        "code": "haste",
+        "name": {
+            "en": "haste",
+            "es": "prisa"
+        },
+        "desc": {
+            "en": "",
+            "es": "La habilidad {haste} permite a quien la tiene atacar el mismo turno en el que entra en juego."
+        }
+    },
+    {
+        "code": "indestructible",
+        "name": {
+            "en": "indestructible",
+            "es": "indestructible"
+        },
+        "desc": {
+            "en": "",
+            "es": "No puede reducir su valor de vida a menos de 1 durante ese turno."
+        }
+    },
+    {
+        "code": "taunt",
+        "name": {
+            "en": "taunt",
+            "es": "provocar"
+        },
+        "desc": {
+            "en": "",
+            "es": "Las unidades atacantes están obligadas a atacar a la unidad con {taunt} aunque no esté en su misma línea. Si hay varias unidades con {taunt}, el atacante decide a quien atacar."
+        }
+    },
+    {
+        "code": "trample",
+        "name": {
+            "en": "trample",
+            "es": "arrollar"
+        },
+        "desc": {
+            "en": "",
+            "es": "Cuando una unidad con {trample} realiza un ataque, el daño sobrante de ese ataque pasa al siguiente objetivo válido de su misma línea."
+        }
+    },
+    {
+        "code": "regeneration",
+        "name": {
+            "en": "regeneration",
+            "es": "regeneración"
+        },
+        "desc": {
+            "en": "",
+            "es": "Una unidad con {regeneration}, recupera todos los puntos de casco perdidos al final del turno."
+        }
+    },
+    {
+        "code": "redirection",
+        "name": {
+            "en": "redirection",
+            "es": "redirección"
+        },
+        "desc": {
+            "en": "",
+            "es": "Redirige todo el daño que reciba esa unidad a otra de su mismo equipo."
+        }
+    },
+    {
+        "code": "reflection",
+        "name": {
+            "en": "reflection",
+            "es": "reflejo"
+        },
+        "desc": {
+            "en": "",
+            "es": "Cuando una unidad con {reflection} es atacado, la unidad atacante recibe la misma cantidad de daño."
+        }
+    },
+    {
+        "code": "poison x",
+        "name": {
+            "en": "poison x",
+            "es": "veneno x"
+        },
+        "desc": {
+            "en": "",
+            "es": "Añade X contadores de {poison X}. Al prinicpio del turno de jugador, el [character] con {poison X} pierde tantos puntos de vida como contadores tenga. Cada turno, durante la fase de mantenimiento, retira un contador de {poison X}."
+        }
+    },
+    {
+        "code": "silence",
+        "name": {
+            "en": "silence",
+            "es": "silencio"
+        },
+        "desc": {
+            "en": "",
+            "es": "Un [character] con silence, no puede activar habilidades. Tampoco su {ultimate}."
+        }
+    }
+]
