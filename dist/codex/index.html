@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>Laravel 9 TALL</title>
+
+        
+        <link rel="preload" as="style" href="http://ocw.personal.com/build/assets/app.0d3addaf.css" /><link rel="modulepreload" href="http://ocw.personal.com/build/assets/app.672cb5ae.js" /><link rel="stylesheet" href="http://ocw.personal.com/build/assets/app.0d3addaf.css" /><script type="module" src="http://ocw.personal.com/build/assets/app.672cb5ae.js"></script>
+        
+        <style>
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
+</style>
+        
+        <!-- Livewire Styles -->
+<style >
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {
+        display: none;
+    }
+
+    [wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {
+        display:none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+    </head>
+
+    <body>
+        
+        <style>
+    #sidebar {
+        -webkit-transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
+        transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
+    }
+
+    #sidebar.show {
+        transform: translateX(0);
+    }
+</style>
+
+<!-- Navbar start -->
+<nav id="navbar" class="sticky top-0 z-50 flex w-full flex-row justify-end bg-gray-200 px-4 sm:justify-between">
+    <button id="btnSidebarToggler" type="button" class="py-4 text-2xl text-gray-600 hover:text-black">
+        <svg id="navClosed" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+             stroke="currentColor" class="h-8 w-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg id="navOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+             stroke="currentColor" class="hidden h-8 w-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+</nav>
+<!-- Navbar end -->
+
+<!-- Sidebar start-->
+<div id="containerSidebar" class="z-40">
+    <div class="navbar-menu relative z-40">
+        <nav id="sidebar"
+             class="fixed left-0 bottom-0 flex w-3/4 -translate-x-full flex-col overflow-y-auto bg-gray-200 pt-6 pb-8 sm:max-w-xs lg:w-80">
+
+            <div class="px-4 pb-6">
+                <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 pl-4 pr-6"
+                        x-data
+                        x-on:change="window.location.href = '/lang/' + $event.target.value">
+                    <option value="es" selected>ES</option>
+                    <option value="en" >EN</option>
+                </select>
+            </div>
+
+            <!-- one category / navigation group -->
+            <div class="px-4 pb-6">
+                <h3 class="mb-2 text-xs font-medium uppercase text-gray-600">Main</h3>
+                <ul class="mb-8 text-sm font-medium">
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/">
+                            <span class="select-none">Homepage</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- navigation group end-->
+
+            <!-- example copies start -->
+            <div class="px-4 pb-6">
+                <h3 class="mb-2 text-xs font-medium uppercase text-gray-600">Game</h3>
+                <ul class="mb-8 text-sm font-medium">
+                    <li>
+                        <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/codex">
+                            <span class="select-none">Codex</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/skills">
+                            <span class="select-none">Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/cards">
+                            <span class="select-none">Cards</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- example copies end -->
+
+            <!-- example copies start -->
+            <div class="px-4 pb-6">
+                <h3 class="mb-2 text-xs font-medium uppercase text-gray-600">Tools</h3>
+                <ul class="mb-8 text-sm font-medium">
+                    <li>
+                        <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/cards">
+                            <span class="select-none">Card generator</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- example copies end -->
+
+        </nav>
+    </div>
+
+    <div class="mx-auto lg:ml-80"></div>
+</div>
+<!-- Sidebar end -->
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        const navbar = document.getElementById("navbar");
+        const sidebar = document.getElementById("sidebar");
+        const btnSidebarToggler = document.getElementById("btnSidebarToggler");
+        const navClosed = document.getElementById("navClosed");
+        const navOpen = document.getElementById("navOpen");
+
+        btnSidebarToggler.addEventListener("click", (e) => {
+            e.preventDefault();
+            sidebar.classList.toggle("show");
+            navClosed.classList.toggle("hidden");
+            navOpen.classList.toggle("hidden");
+        });
+
+        sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
+    });
+</script>
+        <main class="p-4">
+            
+            <div wire:id="FCAVUPGUuz8Bix2oKkff" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;FCAVUPGUuz8Bix2oKkff&quot;,&quot;name&quot;:&quot;table-codex&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;codex&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;93dd4b63&quot;,&quot;data&quot;:{&quot;props&quot;:{&quot;allowSelection&quot;:false},&quot;headers&quot;:[{&quot;key&quot;:&quot;id&quot;,&quot;value&quot;:&quot;ID&quot;},{&quot;key&quot;:&quot;image&quot;,&quot;value&quot;:&quot;Image&quot;},{&quot;key&quot;:&quot;name&quot;,&quot;value&quot;:&quot;Name&quot;},{&quot;key&quot;:&quot;class&quot;,&quot;value&quot;:&quot;Class&quot;},{&quot;key&quot;:&quot;hp&quot;,&quot;value&quot;:&quot;HP&quot;},{&quot;key&quot;:&quot;atk&quot;,&quot;value&quot;:&quot;Attack&quot;},{&quot;key&quot;:&quot;def&quot;,&quot;value&quot;:&quot;Defense&quot;},{&quot;key&quot;:&quot;cost&quot;,&quot;value&quot;:&quot;Cost&quot;},{&quot;key&quot;:&quot;vname&quot;,&quot;value&quot;:&quot;Vanguard&quot;},{&quot;key&quot;:&quot;cname&quot;,&quot;value&quot;:&quot;Center&quot;},{&quot;key&quot;:&quot;rname&quot;,&quot;value&quot;:&quot;Rearguard&quot;},{&quot;key&quot;:&quot;ename&quot;,&quot;value&quot;:&quot;Extra&quot;}],&quot;elements&quot;:[{&quot;id&quot;:&quot;ocw-bc001-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc001-1-es.516527ca.jpg,w:64&quot;,&quot;name&quot;:&quot;Ashra&quot;,&quot;class&quot;:&quot;marksman&quot;,&quot;hp&quot;:10,&quot;atk&quot;:4,&quot;def&quot;:1,&quot;cost&quot;:3,&quot;vname&quot;:&quot;Gana +2#atk# hasta el final del turno.&quot;,&quot;cname&quot;:&quot;Lanza un cono de flechas causando su da\u00f1o de #atk# al primer objetivo de todas las l\u00edneas enemigas.&quot;,&quot;rname&quot;:&quot;{ultimate|definitiva}&lt;hr&gt;Dispara una *flecha de hielo* a un objetivo de su misma l\u00ednea, causando {triple damage|triple da\u00f1o} y aplicando {stun|aturdir}.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc002-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc002-1-es.658c3343.jpg,w:64&quot;,&quot;name&quot;:&quot;Sorgar&quot;,&quot;class&quot;:&quot;defender&quot;,&quot;hp&quot;:18,&quot;atk&quot;:2,&quot;def&quot;:2,&quot;cost&quot;:3,&quot;vname&quot;:&quot;Activa {shield|escudo 1} hasta el inicio de tu siguiente turno.&quot;,&quot;cname&quot;:&quot;Obtiene +2#def# hasta el inicio de tu siguiente turno.&quot;,&quot;rname&quot;:&quot;{ultimate|definitiva}&lt;hr&gt;Debe {advance|avanzar 2}. Luego, obtiene +4#atk# y realiza un ataque {unstoppable|imparable} al primer objetivo de su misma l\u00ednea.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc003-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc003-1-es.c745b6fc.jpg,w:64&quot;,&quot;name&quot;:&quot;Rhyse&quot;,&quot;class&quot;:&quot;caster&quot;,&quot;hp&quot;:12,&quot;atk&quot;:4,&quot;def&quot;:1,&quot;cost&quot;:3,&quot;vname&quot;:&quot;{reach|alcance}&lt;hr&gt;Lanza una bola de energ\u00eda a un objetivo de su misma l\u00ednea que causa la mitad de su valor de #atk# a \u00e9l y a todos los [character|personaje] adyacentes.&quot;,&quot;cname&quot;:&quot;Activa {prison|prisi\u00f3n} sobre el primer [character|personaje] enemigo de su misma l\u00ednea hasta el inicio de su pr\u00f3ximo turno.&quot;,&quot;rname&quot;:&quot;{ultimate|definitiva}{flash|destello}&lt;hr&gt;Invoca un portal y puede {move|mover} a cualquier [character|personaje] adyacente a cualquier posici\u00f3n del campo de batalla (incluido \u00e9l).&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc004-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc004-1-es.c5322301.jpg,w:64&quot;,&quot;name&quot;:&quot;Sorelia&quot;,&quot;class&quot;:&quot;support&quot;,&quot;hp&quot;:12,&quot;atk&quot;:3,&quot;def&quot;:0,&quot;cost&quot;:2,&quot;vname&quot;:&quot;{flash|destello}&lt;hr&gt;Realiza {heal|curar 4} al [character|personaje] de su misma l\u00ednea ubicado en retaguardia.&quot;,&quot;cname&quot;:&quot;{flash|destello}&lt;hr&gt;Realiza {heal|curar 4} al [character|personaje] de su misma l\u00ednea ubicado en vanguardia.&quot;,&quot;rname&quot;:&quot;{ultimate|definitiva}{flash|destello}&lt;hr&gt;Realiza {heal|curar 6} a un [character|personaje] aliado objetivo.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc005-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc005-1-es.b5456c13.jpg,w:64&quot;,&quot;name&quot;:&quot;Jaxar&quot;,&quot;class&quot;:&quot;fighter&quot;,&quot;hp&quot;:15,&quot;atk&quot;:3,&quot;def&quot;:1,&quot;cost&quot;:3,&quot;vname&quot;:&quot;Carga su *arma* y obtiene {double damage|doble da\u00f1o}.&quot;,&quot;cname&quot;:&quot;{ultimate|definitiva}{flash|destello}&lt;hr&gt;Obtiene {dodge|esquiva} y {counterattack|contraataque} hasta el final del turno.&quot;,&quot;rname&quot;:&quot;{reach|alcance}&lt;hr&gt;Carga su *arma* y salta hacia un objetivo de su misma l\u00ednea, obtienendo +2#atk#.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc006-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc006-1-es.b740d8d0.jpg,w:64&quot;,&quot;name&quot;:&quot;Zeph&quot;,&quot;class&quot;:&quot;assassin&quot;,&quot;hp&quot;:10,&quot;atk&quot;:5,&quot;def&quot;:0,&quot;cost&quot;:2,&quot;vname&quot;:&quot;{ultimate|definitiva}&lt;hr&gt;Se lanza contra un objetivo y le deja una marca. Obtiene {triple attack|triple ataque} en el objetivo marcado. &quot;,&quot;cname&quot;:&quot;Coloca una *sombra* en una posici\u00f3n vac\u00eda del campo enemigo y hace un corte circular causando su da\u00f1o de #atk# a todos los [character|personaje] adyacentes.&quot;,&quot;rname&quot;:&quot;Cuando realiza un ataque, si este causa da\u00f1o invoca una *sombra* que vuelve a realizar otro ataque al mismo objetivo.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc007-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc007-1-es.d071381a.jpg,w:64&quot;,&quot;name&quot;:&quot;Vylar&quot;,&quot;class&quot;:&quot;fighter&quot;,&quot;hp&quot;:14,&quot;atk&quot;:3,&quot;def&quot;:1,&quot;cost&quot;:3,&quot;vname&quot;:&quot;{flash|destello}&lt;hr&gt;Gana +2#atk# y realiza un ataque que causa {stun|aturdir} a un objetivo de su misma l\u00ednea.&quot;,&quot;cname&quot;:&quot;{ultimate|definitiva}&lt;hr&gt;Cuando realiza un ataque, si el objetivo muere puede ejecutar una habilidad que no sea {ultimate|definitiva} de ese objetivo pagando su coste.&quot;,&quot;rname&quot;:&quot;Cuando realiza un ataque, gana {move|mover} y puede volver a realizar otro ataque.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc008-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc008-1-es.50a41a53.jpg,w:64&quot;,&quot;name&quot;:&quot;Cassara&quot;,&quot;class&quot;:&quot;caster&quot;,&quot;hp&quot;:13,&quot;atk&quot;:3,&quot;def&quot;:1,&quot;cost&quot;:3,&quot;vname&quot;:&quot;{ultimate|definitiva}&lt;hr&gt;Convierte en piedra y causa {stun|aturdir} y {poison|veneno 2} al primer personaje de todas las l\u00edneas enemigas.&quot;,&quot;cname&quot;:&quot;{reach|alcance}&lt;hr&gt;Cuando realiza un ataque, causa {poison|veneno 1} al [character|personaje] objetivo.&quot;,&quot;rname&quot;:&quot;{reach|alcance}&lt;hr&gt;Causa {silence|silencio} y {poison|veneno 1} a todos los [character|personaje] de su misma l\u00ednea.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc009-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc009-1-es.43292206.jpg,w:64&quot;,&quot;name&quot;:&quot;Jhade&quot;,&quot;class&quot;:&quot;marksman&quot;,&quot;hp&quot;:14,&quot;atk&quot;:4,&quot;def&quot;:0,&quot;cost&quot;:2,&quot;vname&quot;:&quot;Dispara una *bala* que atraviesa a todos los [character|personaje] de su misma l\u00ednea. Distribuye el da\u00f1o del ataque entre todos los objetivos como quieras.&quot;,&quot;cname&quot;:&quot;Coloca una *Flor de Lotto* en un espacio enemigo vac\u00edo. Cuando un [character|personaje] entra en esa posici\u00f3n recibe 5 puntos de da\u00f1o.&quot;,&quot;rname&quot;:&quot;{ultimate|definitiva}{reach|alcance}&lt;hr&gt;Carga su *arma* y gana {triple attack|triple ataque}.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc010-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc010-1-es.e1e6fbaa.jpg,w:64&quot;,&quot;name&quot;:&quot;Fyx&quot;,&quot;class&quot;:&quot;assassin&quot;,&quot;hp&quot;:12,&quot;atk&quot;:5,&quot;def&quot;:0,&quot;cost&quot;:2,&quot;vname&quot;:&quot;{flash|destello}&lt;hr&gt;Se sube a su *tridente* y gana {invulnerable|invulnerable} contra el ataque o habilidad que reciba.&quot;,&quot;cname&quot;:&quot;Carga su *tridente* y gana {double damage|doble da\u00f1o} e {unstoppable|imparable} en su pr\u00f3ximo ataque.&quot;,&quot;rname&quot;:&quot;{ultimate|definitiva}{reach|alcance}&lt;hr&gt;Invoca a un tibur\u00f3n gigante y realiza un ataque en la ubicaci\u00f3n de un objetivo y gana +2#atk#. Distribuye el da\u00f1o como quieras entre el objetivo y todos los [character|personaje] adyacentes.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc011-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc011-1-es.90ba9e8b.jpg,w:64&quot;,&quot;name&quot;:&quot;Malrock&quot;,&quot;class&quot;:&quot;defender&quot;,&quot;hp&quot;:16,&quot;atk&quot;:1,&quot;def&quot;:3,&quot;cost&quot;:4,&quot;vname&quot;:&quot;Obtiene {shield|escudo 1} y gana +1#def# hasta el inicio de tu siguiente turno.&quot;,&quot;cname&quot;:&quot;Obtiene {taunt|provocar} y gana +2#def# hasta el inicio de tu siguiente turno.&quot;,&quot;rname&quot;:&quot;{ultimate|definitiva}&lt;hr&gt;Libera una onda de choque en un objetivo causando {stun|aturdir}. Luego causa su da\u00f1o de #atk# a todos los [character|personaje] adyacentes, incluido el objetivo.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc012-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc012-1-es.485c7c65.jpg,w:64&quot;,&quot;name&quot;:&quot;Luma&quot;,&quot;class&quot;:&quot;support&quot;,&quot;hp&quot;:14,&quot;atk&quot;:1,&quot;def&quot;:1,&quot;cost&quot;:2,&quot;vname&quot;:&quot;{flash|destello}&lt;hr&gt;Realiza {heal|curar 2} a un [character|personaje] aliado y le otorga {dodge|esquiva} hasta el final del turno.&quot;,&quot;cname&quot;:&quot;{reach|alcance}&lt;hr&gt;Causa {silence|silencio} a un [character|personaje] enemigo de su misma l\u00ednea y reduce su #atk# en 2 hasta el final del turno.&quot;,&quot;rname&quot;:&quot;{ultimate|definitiva}{flash|destello}&lt;hr&gt;Realiza {heal|curar 4} a un [character|personaje] aliado y gana +2#atk# y +2#def#, hasta el final del turno.&quot;,&quot;ename&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ocw-bc013-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc013-1-es.bc2c1d37.jpg,w:64&quot;,&quot;name&quot;:&quot;Arco de fuego&quot;,&quot;class&quot;:&quot;marksman&quot;,&quot;hp&quot;:0,&quot;atk&quot;:2,&quot;def&quot;:0,&quot;cost&quot;:3,&quot;vname&quot;:&quot;&quot;,&quot;cname&quot;:&quot;&quot;,&quot;rname&quot;:&quot;&quot;,&quot;ename&quot;:&quot;{reach|alcance}{flash|destello}&lt;hr&gt;Causa la mitad del da\u00f1o a todos los [character|personaje] adyacentes al objetivo atacado.&quot;},{&quot;id&quot;:&quot;ocw-bc014-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc014-1-es.20ba5196.jpg,w:64&quot;,&quot;name&quot;:&quot;Escudo de Aegir&quot;,&quot;class&quot;:&quot;defender&quot;,&quot;hp&quot;:0,&quot;atk&quot;:0,&quot;def&quot;:2,&quot;cost&quot;:3,&quot;vname&quot;:&quot;&quot;,&quot;cname&quot;:&quot;&quot;,&quot;rname&quot;:&quot;&quot;,&quot;ename&quot;:&quot;{flash|destello}&lt;hr&gt;Si la vida del [character|personaje] equipado baja a 1 o menos, este gana {invulnerable|invulnerable} hasta el final del turno. Su vida queda en 1.&quot;},{&quot;id&quot;:&quot;ocw-bc015-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc015-1-es.3bd31e78.jpg,w:64&quot;,&quot;name&quot;:&quot;Bast\u00f3n de Noctavoris&quot;,&quot;class&quot;:&quot;caster&quot;,&quot;hp&quot;:0,&quot;atk&quot;:2,&quot;def&quot;:0,&quot;cost&quot;:3,&quot;vname&quot;:&quot;&quot;,&quot;cname&quot;:&quot;&quot;,&quot;rname&quot;:&quot;&quot;,&quot;ename&quot;:&quot;{flash|destello}&lt;hr&gt;El da\u00f1o que hace el [character|personaje] equipado ignora la armadura y no puede ser reducido.&quot;},{&quot;id&quot;:&quot;ocw-bc016-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc016-1-es.5464809e.jpg,w:64&quot;,&quot;name&quot;:&quot;Sombra Quebravidas &quot;,&quot;class&quot;:&quot;assassin&quot;,&quot;hp&quot;:0,&quot;atk&quot;:1,&quot;def&quot;:0,&quot;cost&quot;:3,&quot;vname&quot;:&quot;&quot;,&quot;cname&quot;:&quot;&quot;,&quot;rname&quot;:&quot;&quot;,&quot;ename&quot;:&quot;{flash|destello}&lt;hr&gt;Cuando ataque a un [character|personaje] de su misma l\u00ednea y cause da\u00f1o, puede {move|mover} inmediatamente a cualquier espacio vac\u00edo y realizar un segundo ataque.&quot;},{&quot;id&quot;:&quot;ocw-bc017-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc017-1-es.ca3bc7c4.jpg,w:64&quot;,&quot;name&quot;:&quot;Garras de Brann-Korr&quot;,&quot;class&quot;:&quot;fighter&quot;,&quot;hp&quot;:0,&quot;atk&quot;:2,&quot;def&quot;:0,&quot;cost&quot;:3,&quot;vname&quot;:&quot;&quot;,&quot;cname&quot;:&quot;&quot;,&quot;rname&quot;:&quot;&quot;,&quot;ename&quot;:&quot;{reach|alcance}&lt;hr&gt;Realiza un ataque con {trample|arrollar}. Si el ataque elimina a un enemigo, puede realizar un segundo ataque inmediatamente.&quot;},{&quot;id&quot;:&quot;ocw-bc018-1-es&quot;,&quot;image&quot;:&quot;img:http:\/\/ocw.personal.com\/build\/assets\/ocw-bc018-1-es.931a1f0e.jpg,w:64&quot;,&quot;name&quot;:&quot;Campana de Eclipsia&quot;,&quot;class&quot;:&quot;support&quot;,&quot;hp&quot;:0,&quot;atk&quot;:0,&quot;def&quot;:1,&quot;cost&quot;:3,&quot;vname&quot;:&quot;&quot;,&quot;cname&quot;:&quot;&quot;,&quot;rname&quot;:&quot;&quot;,&quot;ename&quot;:&quot;{flash|destello}&lt;hr&gt;Aplica {silence|silencio} a un [character|personaje] enemigo que haya activado una habilidad este turno y anula su efecto. Luego, un [character|personaje] aliado de tu elecci\u00f3n gana {counterattack|contraataque} hasta el final del turno.&quot;}]},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;34aa76e627eadebb9f930b86a2de19b9544d7d6dc77228850ccac4156c5ede8b&quot;}}">
+    <div>
+    <div x-data="{ imgModal: false, imgSrc: '' }">
+        <template @lightbox.window="imgModal = true; imgSrc = $event.detail.src;" x-if="imgModal">
+            <div x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 transform scale-90"
+                 x-transition:enter-end="opacity-100 transform scale-100"
+                 x-transition:leave="transition ease-in duration-300"
+                 x-transition:leave-start="opacity-100 transform scale-100"
+                 x-transition:leave-end="opacity-0 transform scale-90"
+                 @click="imgModal = false"
+                 class="p-2 fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center bg-black bg-opacity-75">
+                <div @click.away="imgModal = true" class="flex max-w-3xl max-h-full overflow-auto">
+                    <div class="z-50">
+                        <button @click="imgModal = false" class="float-right pt-2 pr-2 outline-none focus:outline-none">
+                            <svg class="fill-current text-white " xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-2">
+                        <img :alt="imgSrc" class="object-contain h-5/6" :src="imgSrc"/>
+                        
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <div x-data="datatables(JSON.parse('[{\u0022key\u0022:\u0022id\u0022,\u0022value\u0022:\u0022ID\u0022},{\u0022key\u0022:\u0022image\u0022,\u0022value\u0022:\u0022Image\u0022},{\u0022key\u0022:\u0022name\u0022,\u0022value\u0022:\u0022Name\u0022},{\u0022key\u0022:\u0022class\u0022,\u0022value\u0022:\u0022Class\u0022},{\u0022key\u0022:\u0022hp\u0022,\u0022value\u0022:\u0022HP\u0022},{\u0022key\u0022:\u0022atk\u0022,\u0022value\u0022:\u0022Attack\u0022},{\u0022key\u0022:\u0022def\u0022,\u0022value\u0022:\u0022Defense\u0022},{\u0022key\u0022:\u0022cost\u0022,\u0022value\u0022:\u0022Cost\u0022},{\u0022key\u0022:\u0022vname\u0022,\u0022value\u0022:\u0022Vanguard\u0022},{\u0022key\u0022:\u0022cname\u0022,\u0022value\u0022:\u0022Center\u0022},{\u0022key\u0022:\u0022rname\u0022,\u0022value\u0022:\u0022Rearguard\u0022},{\u0022key\u0022:\u0022ename\u0022,\u0022value\u0022:\u0022Extra\u0022}]'), JSON.parse('[{\u0022id\u0022:\u0022ocw-bc001-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc001-1-es.516527ca.jpg,w:64\u0022,\u0022name\u0022:\u0022Ashra\u0022,\u0022class\u0022:\u0022marksman\u0022,\u0022hp\u0022:10,\u0022atk\u0022:4,\u0022def\u0022:1,\u0022cost\u0022:3,\u0022vname\u0022:\u0022Gana +2#atk# hasta el final del turno.\u0022,\u0022cname\u0022:\u0022Lanza un cono de flechas causando su da\\u00f1o de #atk# al primer objetivo de todas las l\\u00edneas enemigas.\u0022,\u0022rname\u0022:\u0022{ultimate|definitiva}\\u003Chr\\u003EDispara una *flecha de hielo* a un objetivo de su misma l\\u00ednea, causando {triple damage|triple da\\u00f1o} y aplicando {stun|aturdir}.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc002-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc002-1-es.658c3343.jpg,w:64\u0022,\u0022name\u0022:\u0022Sorgar\u0022,\u0022class\u0022:\u0022defender\u0022,\u0022hp\u0022:18,\u0022atk\u0022:2,\u0022def\u0022:2,\u0022cost\u0022:3,\u0022vname\u0022:\u0022Activa {shield|escudo 1} hasta el inicio de tu siguiente turno.\u0022,\u0022cname\u0022:\u0022Obtiene +2#def# hasta el inicio de tu siguiente turno.\u0022,\u0022rname\u0022:\u0022{ultimate|definitiva}\\u003Chr\\u003EDebe {advance|avanzar 2}. Luego, obtiene +4#atk# y realiza un ataque {unstoppable|imparable} al primer objetivo de su misma l\\u00ednea.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc003-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc003-1-es.c745b6fc.jpg,w:64\u0022,\u0022name\u0022:\u0022Rhyse\u0022,\u0022class\u0022:\u0022caster\u0022,\u0022hp\u0022:12,\u0022atk\u0022:4,\u0022def\u0022:1,\u0022cost\u0022:3,\u0022vname\u0022:\u0022{reach|alcance}\\u003Chr\\u003ELanza una bola de energ\\u00eda a un objetivo de su misma l\\u00ednea que causa la mitad de su valor de #atk# a \\u00e9l y a todos los [character|personaje] adyacentes.\u0022,\u0022cname\u0022:\u0022Activa {prison|prisi\\u00f3n} sobre el primer [character|personaje] enemigo de su misma l\\u00ednea hasta el inicio de su pr\\u00f3ximo turno.\u0022,\u0022rname\u0022:\u0022{ultimate|definitiva}{flash|destello}\\u003Chr\\u003EInvoca un portal y puede {move|mover} a cualquier [character|personaje] adyacente a cualquier posici\\u00f3n del campo de batalla (incluido \\u00e9l).\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc004-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc004-1-es.c5322301.jpg,w:64\u0022,\u0022name\u0022:\u0022Sorelia\u0022,\u0022class\u0022:\u0022support\u0022,\u0022hp\u0022:12,\u0022atk\u0022:3,\u0022def\u0022:0,\u0022cost\u0022:2,\u0022vname\u0022:\u0022{flash|destello}\\u003Chr\\u003ERealiza {heal|curar 4} al [character|personaje] de su misma l\\u00ednea ubicado en retaguardia.\u0022,\u0022cname\u0022:\u0022{flash|destello}\\u003Chr\\u003ERealiza {heal|curar 4} al [character|personaje] de su misma l\\u00ednea ubicado en vanguardia.\u0022,\u0022rname\u0022:\u0022{ultimate|definitiva}{flash|destello}\\u003Chr\\u003ERealiza {heal|curar 6} a un [character|personaje] aliado objetivo.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc005-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc005-1-es.b5456c13.jpg,w:64\u0022,\u0022name\u0022:\u0022Jaxar\u0022,\u0022class\u0022:\u0022fighter\u0022,\u0022hp\u0022:15,\u0022atk\u0022:3,\u0022def\u0022:1,\u0022cost\u0022:3,\u0022vname\u0022:\u0022Carga su *arma* y obtiene {double damage|doble da\\u00f1o}.\u0022,\u0022cname\u0022:\u0022{ultimate|definitiva}{flash|destello}\\u003Chr\\u003EObtiene {dodge|esquiva} y {counterattack|contraataque} hasta el final del turno.\u0022,\u0022rname\u0022:\u0022{reach|alcance}\\u003Chr\\u003ECarga su *arma* y salta hacia un objetivo de su misma l\\u00ednea, obtienendo +2#atk#.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc006-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc006-1-es.b740d8d0.jpg,w:64\u0022,\u0022name\u0022:\u0022Zeph\u0022,\u0022class\u0022:\u0022assassin\u0022,\u0022hp\u0022:10,\u0022atk\u0022:5,\u0022def\u0022:0,\u0022cost\u0022:2,\u0022vname\u0022:\u0022{ultimate|definitiva}\\u003Chr\\u003ESe lanza contra un objetivo y le deja una marca. Obtiene {triple attack|triple ataque} en el objetivo marcado. \u0022,\u0022cname\u0022:\u0022Coloca una *sombra* en una posici\\u00f3n vac\\u00eda del campo enemigo y hace un corte circular causando su da\\u00f1o de #atk# a todos los [character|personaje] adyacentes.\u0022,\u0022rname\u0022:\u0022Cuando realiza un ataque, si este causa da\\u00f1o invoca una *sombra* que vuelve a realizar otro ataque al mismo objetivo.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc007-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc007-1-es.d071381a.jpg,w:64\u0022,\u0022name\u0022:\u0022Vylar\u0022,\u0022class\u0022:\u0022fighter\u0022,\u0022hp\u0022:14,\u0022atk\u0022:3,\u0022def\u0022:1,\u0022cost\u0022:3,\u0022vname\u0022:\u0022{flash|destello}\\u003Chr\\u003EGana +2#atk# y realiza un ataque que causa {stun|aturdir} a un objetivo de su misma l\\u00ednea.\u0022,\u0022cname\u0022:\u0022{ultimate|definitiva}\\u003Chr\\u003ECuando realiza un ataque, si el objetivo muere puede ejecutar una habilidad que no sea {ultimate|definitiva} de ese objetivo pagando su coste.\u0022,\u0022rname\u0022:\u0022Cuando realiza un ataque, gana {move|mover} y puede volver a realizar otro ataque.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc008-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc008-1-es.50a41a53.jpg,w:64\u0022,\u0022name\u0022:\u0022Cassara\u0022,\u0022class\u0022:\u0022caster\u0022,\u0022hp\u0022:13,\u0022atk\u0022:3,\u0022def\u0022:1,\u0022cost\u0022:3,\u0022vname\u0022:\u0022{ultimate|definitiva}\\u003Chr\\u003EConvierte en piedra y causa {stun|aturdir} y {poison|veneno 2} al primer personaje de todas las l\\u00edneas enemigas.\u0022,\u0022cname\u0022:\u0022{reach|alcance}\\u003Chr\\u003ECuando realiza un ataque, causa {poison|veneno 1} al [character|personaje] objetivo.\u0022,\u0022rname\u0022:\u0022{reach|alcance}\\u003Chr\\u003ECausa {silence|silencio} y {poison|veneno 1} a todos los [character|personaje] de su misma l\\u00ednea.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc009-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc009-1-es.43292206.jpg,w:64\u0022,\u0022name\u0022:\u0022Jhade\u0022,\u0022class\u0022:\u0022marksman\u0022,\u0022hp\u0022:14,\u0022atk\u0022:4,\u0022def\u0022:0,\u0022cost\u0022:2,\u0022vname\u0022:\u0022Dispara una *bala* que atraviesa a todos los [character|personaje] de su misma l\\u00ednea. Distribuye el da\\u00f1o del ataque entre todos los objetivos como quieras.\u0022,\u0022cname\u0022:\u0022Coloca una *Flor de Lotto* en un espacio enemigo vac\\u00edo. Cuando un [character|personaje] entra en esa posici\\u00f3n recibe 5 puntos de da\\u00f1o.\u0022,\u0022rname\u0022:\u0022{ultimate|definitiva}{reach|alcance}\\u003Chr\\u003ECarga su *arma* y gana {triple attack|triple ataque}.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc010-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc010-1-es.e1e6fbaa.jpg,w:64\u0022,\u0022name\u0022:\u0022Fyx\u0022,\u0022class\u0022:\u0022assassin\u0022,\u0022hp\u0022:12,\u0022atk\u0022:5,\u0022def\u0022:0,\u0022cost\u0022:2,\u0022vname\u0022:\u0022{flash|destello}\\u003Chr\\u003ESe sube a su *tridente* y gana {invulnerable|invulnerable} contra el ataque o habilidad que reciba.\u0022,\u0022cname\u0022:\u0022Carga su *tridente* y gana {double damage|doble da\\u00f1o} e {unstoppable|imparable} en su pr\\u00f3ximo ataque.\u0022,\u0022rname\u0022:\u0022{ultimate|definitiva}{reach|alcance}\\u003Chr\\u003EInvoca a un tibur\\u00f3n gigante y realiza un ataque en la ubicaci\\u00f3n de un objetivo y gana +2#atk#. Distribuye el da\\u00f1o como quieras entre el objetivo y todos los [character|personaje] adyacentes.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc011-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc011-1-es.90ba9e8b.jpg,w:64\u0022,\u0022name\u0022:\u0022Malrock\u0022,\u0022class\u0022:\u0022defender\u0022,\u0022hp\u0022:16,\u0022atk\u0022:1,\u0022def\u0022:3,\u0022cost\u0022:4,\u0022vname\u0022:\u0022Obtiene {shield|escudo 1} y gana +1#def# hasta el inicio de tu siguiente turno.\u0022,\u0022cname\u0022:\u0022Obtiene {taunt|provocar} y gana +2#def# hasta el inicio de tu siguiente turno.\u0022,\u0022rname\u0022:\u0022{ultimate|definitiva}\\u003Chr\\u003ELibera una onda de choque en un objetivo causando {stun|aturdir}. Luego causa su da\\u00f1o de #atk# a todos los [character|personaje] adyacentes, incluido el objetivo.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc012-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc012-1-es.485c7c65.jpg,w:64\u0022,\u0022name\u0022:\u0022Luma\u0022,\u0022class\u0022:\u0022support\u0022,\u0022hp\u0022:14,\u0022atk\u0022:1,\u0022def\u0022:1,\u0022cost\u0022:2,\u0022vname\u0022:\u0022{flash|destello}\\u003Chr\\u003ERealiza {heal|curar 2} a un [character|personaje] aliado y le otorga {dodge|esquiva} hasta el final del turno.\u0022,\u0022cname\u0022:\u0022{reach|alcance}\\u003Chr\\u003ECausa {silence|silencio} a un [character|personaje] enemigo de su misma l\\u00ednea y reduce su #atk# en 2 hasta el final del turno.\u0022,\u0022rname\u0022:\u0022{ultimate|definitiva}{flash|destello}\\u003Chr\\u003ERealiza {heal|curar 4} a un [character|personaje] aliado y gana +2#atk# y +2#def#, hasta el final del turno.\u0022,\u0022ename\u0022:\u0022\u0022},{\u0022id\u0022:\u0022ocw-bc013-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc013-1-es.bc2c1d37.jpg,w:64\u0022,\u0022name\u0022:\u0022Arco de fuego\u0022,\u0022class\u0022:\u0022marksman\u0022,\u0022hp\u0022:0,\u0022atk\u0022:2,\u0022def\u0022:0,\u0022cost\u0022:3,\u0022vname\u0022:\u0022\u0022,\u0022cname\u0022:\u0022\u0022,\u0022rname\u0022:\u0022\u0022,\u0022ename\u0022:\u0022{reach|alcance}{flash|destello}\\u003Chr\\u003ECausa la mitad del da\\u00f1o a todos los [character|personaje] adyacentes al objetivo atacado.\u0022},{\u0022id\u0022:\u0022ocw-bc014-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc014-1-es.20ba5196.jpg,w:64\u0022,\u0022name\u0022:\u0022Escudo de Aegir\u0022,\u0022class\u0022:\u0022defender\u0022,\u0022hp\u0022:0,\u0022atk\u0022:0,\u0022def\u0022:2,\u0022cost\u0022:3,\u0022vname\u0022:\u0022\u0022,\u0022cname\u0022:\u0022\u0022,\u0022rname\u0022:\u0022\u0022,\u0022ename\u0022:\u0022{flash|destello}\\u003Chr\\u003ESi la vida del [character|personaje] equipado baja a 1 o menos, este gana {invulnerable|invulnerable} hasta el final del turno. Su vida queda en 1.\u0022},{\u0022id\u0022:\u0022ocw-bc015-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc015-1-es.3bd31e78.jpg,w:64\u0022,\u0022name\u0022:\u0022Bast\\u00f3n de Noctavoris\u0022,\u0022class\u0022:\u0022caster\u0022,\u0022hp\u0022:0,\u0022atk\u0022:2,\u0022def\u0022:0,\u0022cost\u0022:3,\u0022vname\u0022:\u0022\u0022,\u0022cname\u0022:\u0022\u0022,\u0022rname\u0022:\u0022\u0022,\u0022ename\u0022:\u0022{flash|destello}\\u003Chr\\u003EEl da\\u00f1o que hace el [character|personaje] equipado ignora la armadura y no puede ser reducido.\u0022},{\u0022id\u0022:\u0022ocw-bc016-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc016-1-es.5464809e.jpg,w:64\u0022,\u0022name\u0022:\u0022Sombra Quebravidas \u0022,\u0022class\u0022:\u0022assassin\u0022,\u0022hp\u0022:0,\u0022atk\u0022:1,\u0022def\u0022:0,\u0022cost\u0022:3,\u0022vname\u0022:\u0022\u0022,\u0022cname\u0022:\u0022\u0022,\u0022rname\u0022:\u0022\u0022,\u0022ename\u0022:\u0022{flash|destello}\\u003Chr\\u003ECuando ataque a un [character|personaje] de su misma l\\u00ednea y cause da\\u00f1o, puede {move|mover} inmediatamente a cualquier espacio vac\\u00edo y realizar un segundo ataque.\u0022},{\u0022id\u0022:\u0022ocw-bc017-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc017-1-es.ca3bc7c4.jpg,w:64\u0022,\u0022name\u0022:\u0022Garras de Brann-Korr\u0022,\u0022class\u0022:\u0022fighter\u0022,\u0022hp\u0022:0,\u0022atk\u0022:2,\u0022def\u0022:0,\u0022cost\u0022:3,\u0022vname\u0022:\u0022\u0022,\u0022cname\u0022:\u0022\u0022,\u0022rname\u0022:\u0022\u0022,\u0022ename\u0022:\u0022{reach|alcance}\\u003Chr\\u003ERealiza un ataque con {trample|arrollar}. Si el ataque elimina a un enemigo, puede realizar un segundo ataque inmediatamente.\u0022},{\u0022id\u0022:\u0022ocw-bc018-1-es\u0022,\u0022image\u0022:\u0022img:http:\\\/\\\/ocw.personal.com\\\/build\\\/assets\\\/ocw-bc018-1-es.931a1f0e.jpg,w:64\u0022,\u0022name\u0022:\u0022Campana de Eclipsia\u0022,\u0022class\u0022:\u0022support\u0022,\u0022hp\u0022:0,\u0022atk\u0022:0,\u0022def\u0022:1,\u0022cost\u0022:3,\u0022vname\u0022:\u0022\u0022,\u0022cname\u0022:\u0022\u0022,\u0022rname\u0022:\u0022\u0022,\u0022ename\u0022:\u0022{flash|destello}\\u003Chr\\u003EAplica {silence|silencio} a un [character|personaje] enemigo que haya activado una habilidad este turno y anula su efecto. Luego, un [character|personaje] aliado de tu elecci\\u00f3n gana {counterattack|contraataque} hasta el final del turno.\u0022}]'))" x-cloak>
+
+        
+        <div class="mb-4 flex justify-between items-center">
+            <div class="flex-1 pr-4">
+                <div class="relative md:w-1/3">
+                    <input type="search" x-model="search"
+                           class="w-full pl-10 pr-4 py-2 rounded-lg shadow focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                           placeholder="Search...">
+                    <div class="absolute top-0 left-0 inline-flex items-center p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24"
+                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
+                            <circle cx="10" cy="10" r="7"/>
+                            <line x1="21" y1="21" x2="15" y2="15"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative mr-2">
+                <select class="shadow rounded-lg inline-flex items-center bg-white hover:text-blue-500 focus:outline-none focus:shadow-outline text-gray-500 font-semibold py-2 px-2 md:px-4"
+                        x-data
+                        @change="window.location.href = '/lang/' + $event.target.value">
+                    <option value="es" selected>ES</option>
+                    <option value="en" >EN</option>
+                </select>
+            </div>
+
+            <div>
+                <div class="shadow rounded-lg flex">
+                    <div class="relative">
+                        <button @click.prevent="open = !open" class="rounded-lg inline-flex items-center bg-white hover:text-blue-500 focus:outline-none focus:shadow-outline text-gray-500 font-semibold py-2 px-2 md:px-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
+                                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
+                                <path d="M5.5 5h13a1 1 0 0 1 0.5 1.5L14 12L14 19L10 16L10 12L5 6.5a1 1 0 0 1 0.5 -1.5"/>
+                            </svg>
+                            <span class="hidden md:block">Display</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" width="24" height="24"
+                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+
+                        <div x-show="open" @click.away="open = false" class="z-40 absolute top-0 right-0 w-40 bg-white rounded-lg shadow-lg mt-12 -mr-1 block py-1 overflow-hidden">
+                            <template x-for="heading in filteredHeadings(headings)">
+                                <label class="flex justify-start items-center text-truncate hover:bg-gray-100 px-4 py-2">
+                                    <div class="text-blue-600 mr-3">
+                                        <input type="checkbox" class="form-checkbox focus:outline-none focus:shadow-outline" checked @click="toggleColumn(heading.key)">
+                                    </div>
+                                    <div class="select-none text-gray-700" x-text="heading.value"></div>
+                                </label>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto relative">
+            <table class="border-collapse w-full table-auto whitespace-no-wrap bg-white table-striped relative">
+                <thead>
+                <tr class="text-left">
+                                        <template x-for="heading in filteredHeadings(headings)">
+                        <th class="sticky top-0 border-b bg-gray-200 px-6 py-2 text-gray-700 font-bold tracking-wider uppercase text-xs"
+                            x-text="heading.value" x-show="columns.includes(heading.key)" @click="sort(heading.key)"></th>
+                    </template>
+                </tr>
+                </thead>
+                <tbody>
+                <template x-if="!elements">
+                    <tr><td colspan="9999"><i>Loading...</i></td></tr>
+                </template>
+                <template x-for="element in filtered(elements)" :key="element.id">
+                    <tr>
+                        
+                        <template x-for="(col, index) in removeColID(element)">
+                            <td class="border-dashed border-t border-gray-300 text-gray-700 px-6 py-2 align-middle"
+                                x-show="columns.includes(index)"
+                                x-html="formatContent(col, $dispatch)"></td>
+                        </template>
+                    </tr>
+                </template>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+    function datatables(headers, elements) {
+        return {
+            headings: headers, // Cabeceras
+            elements: elements, // Elementos
+
+            open: false,
+            search: '',
+            columns: [],
+
+            sortCol: null,
+            sortAsc: false,
+
+            get selectedElements() {
+                return this.elements.filter((element) => element.selected);
+            },
+
+            init() {
+                this.columns = this.headings.map((h) => {
+                    return h.key;
+                });
+            },
+
+            toggleColumn(key) {
+                this.columns.includes(key)
+                    ? (this.columns = this.columns.filter((i) => i !== key))
+                    : this.columns.push(key);
+            },
+
+            selectAllCheckbox() {
+                let filteredElements = this.filtered(this.elements);
+                if (filteredElements.length === this.selectedElements.length) {
+                    return filteredElements.map((element) => (element.selected = false));
+                }
+                filteredElements.map((element) => (element.selected = true));
+            },
+
+            removeColID(element) {
+                let copy = (JSON.parse(JSON.stringify(element)));
+                delete copy.id;
+                return copy;
+            },
+
+            filteredHeadings() {
+                return this.headings.filter((header) => {
+                    return header.key !== 'id';
+                });
+            },
+
+            filtered(...items) {
+                // Search filter Function for any Array of Objects !
+
+                // You can pass only the Array of Objects,
+                // it will search all props of every Object except "ID"
+                // Example : filtered(elements)
+
+                // OR you can pass additional props, it will only search passed props
+                // Example : filtered(elements, 'firstName', 'lastName','emailAddress', 'phoneNumber')
+
+                values = items.shift(); // get the list of objects
+                props = items.length ? items : null; // get list of props
+
+                return values.filter((i) => {
+                    y = Object.assign({}, i);
+                    delete y['id']; // Specifie the id prop to remove from object
+                    if (props) {
+                        okeys = Object.keys(y).filter((b) => !props.includes(b));
+                        okeys.map((d) => delete y[d]);
+                    }
+                    itemToSearch = Object.values(y).join(); // Object to array, then join to String
+                    return itemToSearch.toLowerCase().includes(this.search.toLowerCase()); // Return filtred Object
+                });
+            },
+
+            sort(col) {
+                if (this.sortCol === col) this.sortAsc = !this.sortAsc;
+                this.sortCol = col;
+
+                this.elements.sort((a, b) => {
+                    if (a[this.sortCol] < b[this.sortCol]) return this.sortAsc ? 1 : -1;
+                    if (a[this.sortCol] > b[this.sortCol]) return this.sortAsc ? -1 : 1;
+                    return 0;
+                });
+            }
+        };
+    }
+
+    /**
+     * img:units/amazons_amazon_1.png
+     * img:units/amazons_amazon_1.png,w:64
+     * img:units/amazons_amazon_1.png,h:64
+     * img:units/amazons_amazon_1.png,w:64,h:64
+     * img:units/amazons_amazon_1.png,h:64,w:64
+     *
+     * @param text
+     * @returns {string|null}
+     */
+    function formatContent(text) {
+        if (text !== 0 && !text) return null;
+
+        let str = String(text);
+        return str
+            .replaceAll(/img:(.*),h:(\d*),w:(\d*)/gmi, "<img class='dt-img' src='$1' height='$2' width='$3' />")
+            .replaceAll(/img:(.*),w:(\d*),h:(\d*)/gmi, "<img class='dt-img' src='$1' width='$2'  height='$3' />")
+            .replaceAll(/img:(.*),h:(\d*)/gmi,         "<img class='dt-img' src='$1' height='$2' />")
+            .replaceAll(/img:(.*),w:(\d*)/gmi,         "<img class='dt-img' src='$1' width='$2' @click=\"$dispatch('lightbox', { src: '$1' })\" class='cursor-pointer' />")
+            .replaceAll(/img:(.*)/gmi,                 "<img class='dt-img' src='$1' />")
+        ;
+    }
+
+    function formatKeywords(text) {
+        if (text !== 0 && !text) return null;
+
+        let str = String(text);
+        return str
+            .replaceAll(/{(.*?)\|(.*?)}/gmi,  "<span class='skill skill-$1'>$2</span>")
+            .replaceAll(/\[(.*?)\|(.*?)]/gmi, "<span class='trait trait-$1'>$2</span>")
+            .replaceAll(/#atk#/gmi,           "<span class='atk'>&nbsp;&nbsp;</span>")
+            .replaceAll(/#def#/gmi,           "<span class='def'>&nbsp;&nbsp;</span>")
+            .replaceAll(/#technologic#/gmi,   "<span class='technologic'>&nbsp;&nbsp;</span>")
+            .replaceAll(/#biologic#/gmi,      "<span class='biologic'>&nbsp;&nbsp;</span>")
+            .replaceAll(/#espectral#/gmi,     "<span class='espectral'>&nbsp;&nbsp;</span>")
+            .replaceAll(/#dimensional#/gmi,   "<span class='dimensional'>&nbsp;&nbsp;</span>");
+    }
+
+</script>
+</div>
+</div>
+
+<!-- Livewire Component wire-end:FCAVUPGUuz8Bix2oKkff -->        </main>
+
+        
+        <!-- Livewire Scripts -->
+
+<script src="/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false" >
+    if (window.livewire) {
+	    console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+	}
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '';
+    window.livewire_token = 'hrX35uVfv3IDOgIUC8jbWJyLMRhJrhdVk9nZebWS';
+
+	/* Make sure Livewire loads first. */
+	if (window.Alpine) {
+	    /* Defer showing the warning so it doesn't get buried under downstream errors. */
+	    document.addEventListener("DOMContentLoaded", function () {
+	        setTimeout(function() {
+	            console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\\n\\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+	        })
+	    });
+	}
+
+	/* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    let started = false;
+
+    window.addEventListener('alpine:initializing', function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+</script>
+    </body>
+
+</html>

@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>Laravel 9 TALL</title>
+
+        
+        <link rel="preload" as="style" href="http://ocw.personal.com/build/assets/app.0d3addaf.css" /><link rel="modulepreload" href="http://ocw.personal.com/build/assets/app.672cb5ae.js" /><link rel="stylesheet" href="http://ocw.personal.com/build/assets/app.0d3addaf.css" /><script type="module" src="http://ocw.personal.com/build/assets/app.672cb5ae.js"></script>
+        
+        <style>
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
+</style>
+        
+        <!-- Livewire Styles -->
+<style >
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {
+        display: none;
+    }
+
+    [wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {
+        display:none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+    </head>
+
+    <body>
+        
+        <style>
+    #sidebar {
+        -webkit-transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
+        transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
+    }
+
+    #sidebar.show {
+        transform: translateX(0);
+    }
+</style>
+
+<!-- Navbar start -->
+<nav id="navbar" class="sticky top-0 z-50 flex w-full flex-row justify-end bg-gray-200 px-4 sm:justify-between">
+    <button id="btnSidebarToggler" type="button" class="py-4 text-2xl text-gray-600 hover:text-black">
+        <svg id="navClosed" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+             stroke="currentColor" class="h-8 w-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg id="navOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+             stroke="currentColor" class="hidden h-8 w-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+</nav>
+<!-- Navbar end -->
+
+<!-- Sidebar start-->
+<div id="containerSidebar" class="z-40">
+    <div class="navbar-menu relative z-40">
+        <nav id="sidebar"
+             class="fixed left-0 bottom-0 flex w-3/4 -translate-x-full flex-col overflow-y-auto bg-gray-200 pt-6 pb-8 sm:max-w-xs lg:w-80">
+
+            <div class="px-4 pb-6">
+                <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 pl-4 pr-6"
+                        x-data
+                        x-on:change="window.location.href = '/lang/' + $event.target.value">
+                    <option value="es" selected>ES</option>
+                    <option value="en" >EN</option>
+                </select>
+            </div>
+
+            <!-- one category / navigation group -->
+            <div class="px-4 pb-6">
+                <h3 class="mb-2 text-xs font-medium uppercase text-gray-600">Main</h3>
+                <ul class="mb-8 text-sm font-medium">
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/">
+                            <span class="select-none">Homepage</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- navigation group end-->
+
+            <!-- example copies start -->
+            <div class="px-4 pb-6">
+                <h3 class="mb-2 text-xs font-medium uppercase text-gray-600">Game</h3>
+                <ul class="mb-8 text-sm font-medium">
+                    <li>
+                        <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/codex">
+                            <span class="select-none">Codex</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/skills">
+                            <span class="select-none">Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/cards">
+                            <span class="select-none">Cards</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- example copies end -->
+
+            <!-- example copies start -->
+            <div class="px-4 pb-6">
+                <h3 class="mb-2 text-xs font-medium uppercase text-gray-600">Tools</h3>
+                <ul class="mb-8 text-sm font-medium">
+                    <li>
+                        <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-800 hover:bg-gray-300" href="/cards">
+                            <span class="select-none">Card generator</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- example copies end -->
+
+        </nav>
+    </div>
+
+    <div class="mx-auto lg:ml-80"></div>
+</div>
+<!-- Sidebar end -->
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        const navbar = document.getElementById("navbar");
+        const sidebar = document.getElementById("sidebar");
+        const btnSidebarToggler = document.getElementById("btnSidebarToggler");
+        const navClosed = document.getElementById("navClosed");
+        const navOpen = document.getElementById("navOpen");
+
+        btnSidebarToggler.addEventListener("click", (e) => {
+            e.preventDefault();
+            sidebar.classList.toggle("show");
+            navClosed.classList.toggle("hidden");
+            navOpen.classList.toggle("hidden");
+        });
+
+        sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
+    });
+</script>
+        <main x-data class="p-4">
+
+            <button x-on:click="generateImages" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 p-1">Generar imágenes</button>
+
+            
+                                                <div wire:id="LkqBsA3hJmSRXGOskVgh" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;LkqBsA3hJmSRXGOskVgh&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;8fe6c80f&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;001&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Ashra&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;marksman&quot;,&quot;hp&quot;:10,&quot;atk&quot;:4,&quot;def&quot;:1,&quot;traits&quot;:[&quot;physical dmg|da\u00f1o f\u00edsico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;2+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Gana +2#atk# hasta el final del turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Lanza un cono de flechas causando su da\u00f1o de #atk# al primer objetivo de todas las l\u00edneas enemigas.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Dispara una *flecha de hielo* a un objetivo de su misma l\u00ednea, causando {triple damage|triple da\u00f1o} y aplicando {stun|aturdir}.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc001-1-es&quot;,&quot;cost&quot;:3,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;marksman|tirador&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;20100d521d1100ff8c72dea13f0749065820c28f77afa8125955ed7beef3fc19&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc001-1-es"
+         data-number="001">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc001-1.957e450b.jpg')"></div>
+
+
+        <div class="elements elements-marksman"></div>
+
+        <div class="card-name">Ashra</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">10</div>
+        <div class="attack">4</div>
+        <div class="defense">1</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [marksman|tirador]&nbsp;
+                                            [physical dmg|daño físico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">2+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Gana +2#atk# hasta el final del turno.</div></div>
+                    <div class="skill-description"><div class="text">Gana +2#atk# hasta el final del turno.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Lanza un cono de flechas causando su daño de #atk# al primer objetivo de todas las líneas enemigas.</div></div>
+                    <div class="skill-description"><div class="text">Lanza un cono de flechas causando su daño de #atk# al primer objetivo de todas las líneas enemigas.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Dispara una *flecha de hielo* a un objetivo de su misma línea, causando {triple damage|triple daño} y aplicando {stun|aturdir}.</div></div>
+                    <div class="skill-description"><div class="text">Dispara una *flecha de hielo* a un objetivo de su misma línea, causando {triple damage|triple daño} y aplicando {stun|aturdir}.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC001-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:LkqBsA3hJmSRXGOskVgh -->                                                                <div wire:id="MdPdlCQHQejsiuNWS2xI" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;MdPdlCQHQejsiuNWS2xI&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;7b91bc79&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;002&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Sorgar&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;defender&quot;,&quot;hp&quot;:18,&quot;atk&quot;:2,&quot;def&quot;:2,&quot;traits&quot;:[&quot;physical dmg|da\u00f1o f\u00edsico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;2+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Activa {shield|escudo 1} hasta el inicio de tu siguiente turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Obtiene +2#def# hasta el inicio de tu siguiente turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Debe {advance|avanzar 2}. Luego, obtiene +4#atk# y realiza un ataque {unstoppable|imparable} al primer objetivo de su misma l\u00ednea.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc002-1-es&quot;,&quot;cost&quot;:3,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;defender|defensor&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;4cdd2f8d90b467f827a9fc2a8a9aebb0f4c967809bc3ecddf1f360c7ad25426d&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc002-1-es"
+         data-number="002">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc002-1.fe59c661.jpg')"></div>
+
+
+        <div class="elements elements-defender"></div>
+
+        <div class="card-name">Sorgar</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">18</div>
+        <div class="attack">2</div>
+        <div class="defense">2</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [defender|defensor]&nbsp;
+                                            [physical dmg|daño físico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">2+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Activa {shield|escudo 1} hasta el inicio de tu siguiente turno.</div></div>
+                    <div class="skill-description"><div class="text">Activa {shield|escudo 1} hasta el inicio de tu siguiente turno.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Obtiene +2#def# hasta el inicio de tu siguiente turno.</div></div>
+                    <div class="skill-description"><div class="text">Obtiene +2#def# hasta el inicio de tu siguiente turno.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Debe {advance|avanzar 2}. Luego, obtiene +4#atk# y realiza un ataque {unstoppable|imparable} al primer objetivo de su misma línea.</div></div>
+                    <div class="skill-description"><div class="text">Debe {advance|avanzar 2}. Luego, obtiene +4#atk# y realiza un ataque {unstoppable|imparable} al primer objetivo de su misma línea.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC002-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:MdPdlCQHQejsiuNWS2xI -->                                                                <div wire:id="jLraDfgZyyYGl2Nv1cT1" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;jLraDfgZyyYGl2Nv1cT1&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;49bf1648&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;003&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Rhyse&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;caster&quot;,&quot;hp&quot;:12,&quot;atk&quot;:4,&quot;def&quot;:1,&quot;traits&quot;:[&quot;magic dmg|da\u00f1o m\u00e1gico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[&quot;reach|alcance&quot;],&quot;cost&quot;:&quot;2+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Lanza una bola de energ\u00eda a un objetivo de su misma l\u00ednea que causa la mitad de su valor de #atk# a \u00e9l y a todos los [character|personaje] adyacentes.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Activa {prison|prisi\u00f3n} sobre el primer [character|personaje] enemigo de su misma l\u00ednea hasta el inicio de su pr\u00f3ximo turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;,&quot;flash|destello&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Invoca un portal y puede {move|mover} a cualquier [character|personaje] adyacente a cualquier posici\u00f3n del campo de batalla (incluido \u00e9l).&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc003-1-es&quot;,&quot;cost&quot;:3,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;caster|mago&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;2b15323ff27a3ddcf80306c774bb8c5fb1ecc320d9ed2dcddd8ed2025cca50c0&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc003-1-es"
+         data-number="003">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc003-1.d9f0758e.jpg')"></div>
+
+
+        <div class="elements elements-caster"></div>
+
+        <div class="card-name">Rhyse</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">12</div>
+        <div class="attack">4</div>
+        <div class="defense">1</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [caster|mago]&nbsp;
+                                            [magic dmg|daño mágico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">2+</div>
+                        <div class="skills text">
+                                                            {reach|alcance}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Lanza una bola de energía a un objetivo de su misma línea que causa la mitad de su valor de #atk# a él y a todos los [character|personaje] adyacentes.</div></div>
+                    <div class="skill-description"><div class="text">Lanza una bola de energía a un objetivo de su misma línea que causa la mitad de su valor de #atk# a él y a todos los [character|personaje] adyacentes.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Activa {prison|prisión} sobre el primer [character|personaje] enemigo de su misma línea hasta el inicio de su próximo turno.</div></div>
+                    <div class="skill-description"><div class="text">Activa {prison|prisión} sobre el primer [character|personaje] enemigo de su misma línea hasta el inicio de su próximo turno.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Invoca un portal y puede {move|mover} a cualquier [character|personaje] adyacente a cualquier posición del campo de batalla (incluido él).</div></div>
+                    <div class="skill-description"><div class="text">Invoca un portal y puede {move|mover} a cualquier [character|personaje] adyacente a cualquier posición del campo de batalla (incluido él).</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC003-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:jLraDfgZyyYGl2Nv1cT1 -->                                                                <div wire:id="kxkudWDnr9uHcQkuf4pB" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;kxkudWDnr9uHcQkuf4pB&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;8a66552d&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;004&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Sorelia&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;support&quot;,&quot;hp&quot;:12,&quot;atk&quot;:3,&quot;def&quot;:0,&quot;traits&quot;:[&quot;magic dmg|da\u00f1o m\u00e1gico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[&quot;flash|destello&quot;],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Realiza {heal|curar 4} al [character|personaje] de su misma l\u00ednea ubicado en retaguardia.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[&quot;flash|destello&quot;],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Realiza {heal|curar 4} al [character|personaje] de su misma l\u00ednea ubicado en vanguardia.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;,&quot;flash|destello&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Realiza {heal|curar 6} a un [character|personaje] aliado objetivo.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc004-1-es&quot;,&quot;cost&quot;:2,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;support|soporte&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;389efa72f6d6d64439e019b2bc0d7006e912e4d4db9b7312221bb5636cf2b389&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc004-1-es"
+         data-number="004">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc004-1.932f6a97.jpg')"></div>
+
+
+        <div class="elements elements-support"></div>
+
+        <div class="card-name">Sorelia</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">12</div>
+        <div class="attack">3</div>
+        <div class="defense">0</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [support|soporte]&nbsp;
+                                            [magic dmg|daño mágico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Realiza {heal|curar 4} al [character|personaje] de su misma línea ubicado en retaguardia.</div></div>
+                    <div class="skill-description"><div class="text">Realiza {heal|curar 4} al [character|personaje] de su misma línea ubicado en retaguardia.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Realiza {heal|curar 4} al [character|personaje] de su misma línea ubicado en vanguardia.</div></div>
+                    <div class="skill-description"><div class="text">Realiza {heal|curar 4} al [character|personaje] de su misma línea ubicado en vanguardia.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Realiza {heal|curar 6} a un [character|personaje] aliado objetivo.</div></div>
+                    <div class="skill-description"><div class="text">Realiza {heal|curar 6} a un [character|personaje] aliado objetivo.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC004-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:kxkudWDnr9uHcQkuf4pB -->                                                                <div wire:id="gQ72ggX86AfeapsM0Xzz" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;gQ72ggX86AfeapsM0Xzz&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;0a509955&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;005&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Jaxar&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;fighter&quot;,&quot;hp&quot;:15,&quot;atk&quot;:3,&quot;def&quot;:1,&quot;traits&quot;:[&quot;physical dmg|da\u00f1o f\u00edsico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Carga su *arma* y obtiene {double damage|doble da\u00f1o}.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;,&quot;flash|destello&quot;],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Obtiene {dodge|esquiva} y {counterattack|contraataque} hasta el final del turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;reach|alcance&quot;],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Carga su *arma* y salta hacia un objetivo de su misma l\u00ednea, obtienendo +2#atk#.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc005-1-es&quot;,&quot;cost&quot;:3,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;fighter|luchador&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;df47c476900a5598f5c7c7af991569843fe36fa1a4c0b09d6c9e43879ff5a263&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc005-1-es"
+         data-number="005">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc005-1.72043554.jpg')"></div>
+
+
+        <div class="elements elements-fighter"></div>
+
+        <div class="card-name">Jaxar</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">15</div>
+        <div class="attack">3</div>
+        <div class="defense">1</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [fighter|luchador]&nbsp;
+                                            [physical dmg|daño físico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Carga su *arma* y obtiene {double damage|doble daño}.</div></div>
+                    <div class="skill-description"><div class="text">Carga su *arma* y obtiene {double damage|doble daño}.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Obtiene {dodge|esquiva} y {counterattack|contraataque} hasta el final del turno.</div></div>
+                    <div class="skill-description"><div class="text">Obtiene {dodge|esquiva} y {counterattack|contraataque} hasta el final del turno.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                            {reach|alcance}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Carga su *arma* y salta hacia un objetivo de su misma línea, obtienendo +2#atk#.</div></div>
+                    <div class="skill-description"><div class="text">Carga su *arma* y salta hacia un objetivo de su misma línea, obtienendo +2#atk#.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC005-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:gQ72ggX86AfeapsM0Xzz -->                                                                <div wire:id="XstBBYSK1apn34brrgMl" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;XstBBYSK1apn34brrgMl&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;d91a5d9b&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;006&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Zeph&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;assassin&quot;,&quot;hp&quot;:10,&quot;atk&quot;:5,&quot;def&quot;:0,&quot;traits&quot;:[&quot;physical dmg|da\u00f1o f\u00edsico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Se lanza contra un objetivo y le deja una marca. Obtiene {triple attack|triple ataque} en el objetivo marcado. &quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Coloca una *sombra* en una posici\u00f3n vac\u00eda del campo enemigo y hace un corte circular causando su da\u00f1o de #atk# a todos los [character|personaje] adyacentes.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Cuando realiza un ataque, si este causa da\u00f1o invoca una *sombra* que vuelve a realizar otro ataque al mismo objetivo.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc006-1-es&quot;,&quot;cost&quot;:2,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;assassin|asesino&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;8ca7cbde6f5ae84bd30fc7e1a482dc17733e6e54669e267d78ff7c527afecf3f&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc006-1-es"
+         data-number="006">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc006-1.a6ead5c9.jpg')"></div>
+
+
+        <div class="elements elements-assassin"></div>
+
+        <div class="card-name">Zeph</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">10</div>
+        <div class="attack">5</div>
+        <div class="defense">0</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [assassin|asesino]&nbsp;
+                                            [physical dmg|daño físico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Se lanza contra un objetivo y le deja una marca. Obtiene {triple attack|triple ataque} en el objetivo marcado. </div></div>
+                    <div class="skill-description"><div class="text">Se lanza contra un objetivo y le deja una marca. Obtiene {triple attack|triple ataque} en el objetivo marcado. </div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Coloca una *sombra* en una posición vacía del campo enemigo y hace un corte circular causando su daño de #atk# a todos los [character|personaje] adyacentes.</div></div>
+                    <div class="skill-description"><div class="text">Coloca una *sombra* en una posición vacía del campo enemigo y hace un corte circular causando su daño de #atk# a todos los [character|personaje] adyacentes.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Cuando realiza un ataque, si este causa daño invoca una *sombra* que vuelve a realizar otro ataque al mismo objetivo.</div></div>
+                    <div class="skill-description"><div class="text">Cuando realiza un ataque, si este causa daño invoca una *sombra* que vuelve a realizar otro ataque al mismo objetivo.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC006-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:XstBBYSK1apn34brrgMl -->                                                                <div wire:id="CxjySB00wOiJctvYdZd4" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;CxjySB00wOiJctvYdZd4&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;da787523&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;007&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Vylar&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;fighter&quot;,&quot;hp&quot;:14,&quot;atk&quot;:3,&quot;def&quot;:1,&quot;traits&quot;:[&quot;physical dmg|da\u00f1o f\u00edsico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[&quot;flash|destello&quot;],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Gana +2#atk# y realiza un ataque que causa {stun|aturdir} a un objetivo de su misma l\u00ednea.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Cuando realiza un ataque, si el objetivo muere puede ejecutar una habilidad que no sea {ultimate|definitiva} de ese objetivo pagando su coste.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Cuando realiza un ataque, gana {move|mover} y puede volver a realizar otro ataque.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc007-1-es&quot;,&quot;cost&quot;:3,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;fighter|luchador&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;d05113f5ad77ff32f5b0333a06bb752cf44da12970beff0855c914cad487551e&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc007-1-es"
+         data-number="007">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc007-1.0fd2708c.jpg')"></div>
+
+
+        <div class="elements elements-fighter"></div>
+
+        <div class="card-name">Vylar</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">14</div>
+        <div class="attack">3</div>
+        <div class="defense">1</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [fighter|luchador]&nbsp;
+                                            [physical dmg|daño físico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Gana +2#atk# y realiza un ataque que causa {stun|aturdir} a un objetivo de su misma línea.</div></div>
+                    <div class="skill-description"><div class="text">Gana +2#atk# y realiza un ataque que causa {stun|aturdir} a un objetivo de su misma línea.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Cuando realiza un ataque, si el objetivo muere puede ejecutar una habilidad que no sea {ultimate|definitiva} de ese objetivo pagando su coste.</div></div>
+                    <div class="skill-description"><div class="text">Cuando realiza un ataque, si el objetivo muere puede ejecutar una habilidad que no sea {ultimate|definitiva} de ese objetivo pagando su coste.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Cuando realiza un ataque, gana {move|mover} y puede volver a realizar otro ataque.</div></div>
+                    <div class="skill-description"><div class="text">Cuando realiza un ataque, gana {move|mover} y puede volver a realizar otro ataque.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC007-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:CxjySB00wOiJctvYdZd4 -->                                                                <div wire:id="iqbYASGwkpIQnCUS70Yd" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;iqbYASGwkpIQnCUS70Yd&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;535c69b1&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;008&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Cassara&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;caster&quot;,&quot;hp&quot;:13,&quot;atk&quot;:3,&quot;def&quot;:1,&quot;traits&quot;:[&quot;magic dmg|da\u00f1o m\u00e1gico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Convierte en piedra y causa {stun|aturdir} y {poison|veneno 2} al primer personaje de todas las l\u00edneas enemigas.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[&quot;reach|alcance&quot;],&quot;cost&quot;:&quot;2+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Cuando realiza un ataque, causa {poison|veneno 1} al [character|personaje] objetivo.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;reach|alcance&quot;],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Causa {silence|silencio} y {poison|veneno 1} a todos los [character|personaje] de su misma l\u00ednea.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc008-1-es&quot;,&quot;cost&quot;:3,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;caster|mago&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;99c30e941e207068f696be1fe9d1d4b8c786d47aeeb54b951a11d92cf81135ab&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc008-1-es"
+         data-number="008">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc008-1.ccf7d6d2.jpg')"></div>
+
+
+        <div class="elements elements-caster"></div>
+
+        <div class="card-name">Cassara</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">13</div>
+        <div class="attack">3</div>
+        <div class="defense">1</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [caster|mago]&nbsp;
+                                            [magic dmg|daño mágico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Convierte en piedra y causa {stun|aturdir} y {poison|veneno 2} al primer personaje de todas las líneas enemigas.</div></div>
+                    <div class="skill-description"><div class="text">Convierte en piedra y causa {stun|aturdir} y {poison|veneno 2} al primer personaje de todas las líneas enemigas.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">2+</div>
+                        <div class="skills text">
+                                                            {reach|alcance}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Cuando realiza un ataque, causa {poison|veneno 1} al [character|personaje] objetivo.</div></div>
+                    <div class="skill-description"><div class="text">Cuando realiza un ataque, causa {poison|veneno 1} al [character|personaje] objetivo.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                            {reach|alcance}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Causa {silence|silencio} y {poison|veneno 1} a todos los [character|personaje] de su misma línea.</div></div>
+                    <div class="skill-description"><div class="text">Causa {silence|silencio} y {poison|veneno 1} a todos los [character|personaje] de su misma línea.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC008-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:iqbYASGwkpIQnCUS70Yd -->                                                                <div wire:id="KNp0DzAQ21eAA6myjw5w" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;KNp0DzAQ21eAA6myjw5w&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;fd936435&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;009&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Jhade&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;marksman&quot;,&quot;hp&quot;:14,&quot;atk&quot;:4,&quot;def&quot;:0,&quot;traits&quot;:[&quot;physical dmg|da\u00f1o f\u00edsico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Dispara una *bala* que atraviesa a todos los [character|personaje] de su misma l\u00ednea. Distribuye el da\u00f1o del ataque entre todos los objetivos como quieras.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Coloca una *Flor de Lotto* en un espacio enemigo vac\u00edo. Cuando un [character|personaje] entra en esa posici\u00f3n recibe 5 puntos de da\u00f1o.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;,&quot;reach|alcance&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Carga su *arma* y gana {triple attack|triple ataque}.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc009-1-es&quot;,&quot;cost&quot;:2,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;marksman|tirador&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;2d593ae61245bdc4c68bab99fc09818e7e46e7cc65d4cdf45ad43a349f2ab9e1&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc009-1-es"
+         data-number="009">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc009-1.2885895a.jpg')"></div>
+
+
+        <div class="elements elements-marksman"></div>
+
+        <div class="card-name">Jhade</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">14</div>
+        <div class="attack">4</div>
+        <div class="defense">0</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [marksman|tirador]&nbsp;
+                                            [physical dmg|daño físico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Dispara una *bala* que atraviesa a todos los [character|personaje] de su misma línea. Distribuye el daño del ataque entre todos los objetivos como quieras.</div></div>
+                    <div class="skill-description"><div class="text">Dispara una *bala* que atraviesa a todos los [character|personaje] de su misma línea. Distribuye el daño del ataque entre todos los objetivos como quieras.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Coloca una *Flor de Lotto* en un espacio enemigo vacío. Cuando un [character|personaje] entra en esa posición recibe 5 puntos de daño.</div></div>
+                    <div class="skill-description"><div class="text">Coloca una *Flor de Lotto* en un espacio enemigo vacío. Cuando un [character|personaje] entra en esa posición recibe 5 puntos de daño.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                            {reach|alcance}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Carga su *arma* y gana {triple attack|triple ataque}.</div></div>
+                    <div class="skill-description"><div class="text">Carga su *arma* y gana {triple attack|triple ataque}.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC009-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:KNp0DzAQ21eAA6myjw5w -->                                                                <div wire:id="DPI91NRIbhbHExsAyVBz" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;DPI91NRIbhbHExsAyVBz&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;2fa5ff82&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;010&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Fyx&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;assassin&quot;,&quot;hp&quot;:12,&quot;atk&quot;:5,&quot;def&quot;:0,&quot;traits&quot;:[&quot;magic dmg|da\u00f1o m\u00e1gico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[&quot;flash|destello&quot;],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Se sube a su *tridente* y gana {invulnerable|invulnerable} contra el ataque o habilidad que reciba.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Carga su *tridente* y gana {double damage|doble da\u00f1o} e {unstoppable|imparable} en su pr\u00f3ximo ataque.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;,&quot;reach|alcance&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Invoca a un tibur\u00f3n gigante y realiza un ataque en la ubicaci\u00f3n de un objetivo y gana +2#atk#. Distribuye el da\u00f1o como quieras entre el objetivo y todos los [character|personaje] adyacentes.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc010-1-es&quot;,&quot;cost&quot;:2,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;assassin|asesino&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;901557ad996a7844b65b49630e1e287ee475fe35176827f41d6a87c86cff01d8&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc010-1-es"
+         data-number="010">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc010-1.f738a678.jpg')"></div>
+
+
+        <div class="elements elements-assassin"></div>
+
+        <div class="card-name">Fyx</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">12</div>
+        <div class="attack">5</div>
+        <div class="defense">0</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [assassin|asesino]&nbsp;
+                                            [magic dmg|daño mágico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Se sube a su *tridente* y gana {invulnerable|invulnerable} contra el ataque o habilidad que reciba.</div></div>
+                    <div class="skill-description"><div class="text">Se sube a su *tridente* y gana {invulnerable|invulnerable} contra el ataque o habilidad que reciba.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Carga su *tridente* y gana {double damage|doble daño} e {unstoppable|imparable} en su próximo ataque.</div></div>
+                    <div class="skill-description"><div class="text">Carga su *tridente* y gana {double damage|doble daño} e {unstoppable|imparable} en su próximo ataque.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                            {reach|alcance}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Invoca a un tiburón gigante y realiza un ataque en la ubicación de un objetivo y gana +2#atk#. Distribuye el daño como quieras entre el objetivo y todos los [character|personaje] adyacentes.</div></div>
+                    <div class="skill-description"><div class="text">Invoca a un tiburón gigante y realiza un ataque en la ubicación de un objetivo y gana +2#atk#. Distribuye el daño como quieras entre el objetivo y todos los [character|personaje] adyacentes.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC010-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:DPI91NRIbhbHExsAyVBz -->                                                                <div wire:id="tP4grKvg0YIgh3Ytc6yC" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;tP4grKvg0YIgh3Ytc6yC&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;ace8ce78&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;011&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Malrock&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;defender&quot;,&quot;hp&quot;:16,&quot;atk&quot;:1,&quot;def&quot;:3,&quot;traits&quot;:[&quot;magic dmg|da\u00f1o m\u00e1gico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;2+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Obtiene {shield|escudo 1} y gana +1#def# hasta el inicio de tu siguiente turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Obtiene {taunt|provocar} y gana +2#def# hasta el inicio de tu siguiente turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Libera una onda de choque en un objetivo causando {stun|aturdir}. Luego causa su da\u00f1o de #atk# a todos los [character|personaje] adyacentes, incluido el objetivo.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc011-1-es&quot;,&quot;cost&quot;:4,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;defender|defensor&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;d97d4482b5cfe23a43ff215e25bf959c92f9b0e86a9fa5561956b12d13b29ddd&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc011-1-es"
+         data-number="011">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc011-1.408d146c.jpg')"></div>
+
+
+        <div class="elements elements-defender"></div>
+
+        <div class="card-name">Malrock</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">16</div>
+        <div class="attack">1</div>
+        <div class="defense">3</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [defender|defensor]&nbsp;
+                                            [magic dmg|daño mágico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">2+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Obtiene {shield|escudo 1} y gana +1#def# hasta el inicio de tu siguiente turno.</div></div>
+                    <div class="skill-description"><div class="text">Obtiene {shield|escudo 1} y gana +1#def# hasta el inicio de tu siguiente turno.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Obtiene {taunt|provocar} y gana +2#def# hasta el inicio de tu siguiente turno.</div></div>
+                    <div class="skill-description"><div class="text">Obtiene {taunt|provocar} y gana +2#def# hasta el inicio de tu siguiente turno.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Libera una onda de choque en un objetivo causando {stun|aturdir}. Luego causa su daño de #atk# a todos los [character|personaje] adyacentes, incluido el objetivo.</div></div>
+                    <div class="skill-description"><div class="text">Libera una onda de choque en un objetivo causando {stun|aturdir}. Luego causa su daño de #atk# a todos los [character|personaje] adyacentes, incluido el objetivo.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC011-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:tP4grKvg0YIgh3Ytc6yC -->                                                                <div wire:id="321CrCEWEifmbGWiokgv" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;321CrCEWEifmbGWiokgv&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;6da1026c&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;012&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Luma&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;character&quot;,&quot;class&quot;:&quot;support&quot;,&quot;hp&quot;:14,&quot;atk&quot;:1,&quot;def&quot;:1,&quot;traits&quot;:[&quot;magic dmg|da\u00f1o m\u00e1gico&quot;],&quot;skills&quot;:[],&quot;vanguard&quot;:{&quot;skills&quot;:[&quot;flash|destello&quot;],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Realiza {heal|curar 2} a un [character|personaje] aliado y le otorga {dodge|esquiva} hasta el final del turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;center&quot;:{&quot;skills&quot;:[&quot;reach|alcance&quot;],&quot;cost&quot;:&quot;3+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Causa {silence|silencio} a un [character|personaje] enemigo de su misma l\u00ednea y reduce su #atk# en 2 hasta el final del turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;rearguard&quot;:{&quot;skills&quot;:[&quot;ultimate|definitiva&quot;,&quot;flash|destello&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Realiza {heal|curar 4} a un [character|personaje] aliado y gana +2#atk# y +2#def#, hasta el final del turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc012-1-es&quot;,&quot;cost&quot;:2,&quot;type_text&quot;:&quot;character|personaje&quot;,&quot;class_text&quot;:&quot;support|soporte&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;84968a294e7271fde202a26d06619e7f128b52c5cd04a9cbb5e637f4611a7001&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc012-1-es"
+         data-number="012">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc012-1.b3666789.jpg')"></div>
+
+
+        <div class="elements elements-support"></div>
+
+        <div class="card-name">Luma</div>
+        <div class="card-cost">
+                            <div class="text"></div>
+                            <div class="text"></div>
+                    </div>
+
+        <div class="hp">14</div>
+        <div class="attack">1</div>
+        <div class="defense">1</div>
+
+        <div class="skill-group">
+            <div class="skill-container">
+
+                <div class="skill-traits text">
+                    [support|soporte]&nbsp;
+                                            [magic dmg|daño mágico]&nbsp;
+                                                        </div>
+
+                <div class="skill-vanguard">
+                    <div class="skill-line">
+                        <div class="line">VANGUARD</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Realiza {heal|curar 2} a un [character|personaje] aliado y le otorga {dodge|esquiva} hasta el final del turno.</div></div>
+                    <div class="skill-description"><div class="text">Realiza {heal|curar 2} a un [character|personaje] aliado y le otorga {dodge|esquiva} hasta el final del turno.</div></div>
+                </div>
+
+                <div class="skill-center">
+                    <div class="skill-line">
+                        <div class="line">CENTER</div>
+                        <div class="cost text">3+</div>
+                        <div class="skills text">
+                                                            {reach|alcance}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Causa {silence|silencio} a un [character|personaje] enemigo de su misma línea y reduce su #atk# en 2 hasta el final del turno.</div></div>
+                    <div class="skill-description"><div class="text">Causa {silence|silencio} a un [character|personaje] enemigo de su misma línea y reduce su #atk# en 2 hasta el final del turno.</div></div>
+                </div>
+
+                <div class="skill-rearguard">
+                    <div class="skill-line">
+                        <div class="line">REARGUARD</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {ultimate|definitiva}
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Realiza {heal|curar 4} a un [character|personaje] aliado y gana +2#atk# y +2#def#, hasta el final del turno.</div></div>
+                    <div class="skill-description"><div class="text">Realiza {heal|curar 4} a un [character|personaje] aliado y gana +2#atk# y +2#def#, hasta el final del turno.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [character|personaje]
+            OPEN CARD WARS OCW-BC012-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:321CrCEWEifmbGWiokgv -->                                                                <div wire:id="nQoDzqefI0TXcQYkzO68" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;nQoDzqefI0TXcQYkzO68&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;cc71c34b&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;013&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Arco de fuego&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;equip&quot;,&quot;class&quot;:&quot;marksman&quot;,&quot;cost&quot;:3,&quot;hp&quot;:0,&quot;atk&quot;:2,&quot;def&quot;:0,&quot;extra&quot;:{&quot;skills&quot;:[&quot;reach|alcance&quot;,&quot;flash|destello&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Causa la mitad del da\u00f1o a todos los [character|personaje] adyacentes al objetivo atacado.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc013-1-es&quot;,&quot;type_text&quot;:&quot;equip|equipo&quot;,&quot;class_text&quot;:&quot;marksman|tirador&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;697282a06c3853b5f3b14585d6dc9b5f8ec7cc654b276988442d97099baa8c0d&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc013-1-es"
+         data-number="013">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc013-1.6b75f50e.jpg')"></div>
+
+
+        <div class="elements elements-equip">
+            <div class="card-name">Arco de fuego</div>
+            <div class="card-cost">
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                            </div>
+        </div>
+
+        <div class="stats-equip">
+            <div class="name">Arco de fuego</div>
+            <div class="attack"><span class="equip-plus">+</span>2</div>
+            <div class="defense"><span class="equip-plus">+</span>0</div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-container skill-container-equip">
+
+                <div class="skill-traits text">
+                    [marksman|tirador]&nbsp;
+                    
+                                                        </div>
+
+                <div class="skill-extra">
+                    <div class="skill-line">
+                        <div class="line">EXTRA</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {reach|alcance}
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Causa la mitad del daño a todos los [character|personaje] adyacentes al objetivo atacado.</div></div>
+                    <div class="skill-description"><div class="text">Causa la mitad del daño a todos los [character|personaje] adyacentes al objetivo atacado.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [equip|equipo]
+            OPEN CARD WARS OCW-BC013-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:nQoDzqefI0TXcQYkzO68 -->                                                                <div wire:id="f3UK5m4dTczD5Nao7ZQ2" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;f3UK5m4dTczD5Nao7ZQ2&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;8d59ba6c&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;014&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Escudo de Aegir&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;equip&quot;,&quot;class&quot;:&quot;defender&quot;,&quot;cost&quot;:3,&quot;hp&quot;:0,&quot;atk&quot;:0,&quot;def&quot;:2,&quot;extra&quot;:{&quot;skills&quot;:[&quot;flash|destello&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Si la vida del [character|personaje] equipado baja a 1 o menos, este gana {invulnerable|invulnerable} hasta el final del turno. Su vida queda en 1.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc014-1-es&quot;,&quot;type_text&quot;:&quot;equip|equipo&quot;,&quot;class_text&quot;:&quot;defender|defensor&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;2f8227889163fdeb03499fb13d8e2c6e93a94be830d3ee456a29e088c9326b61&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc014-1-es"
+         data-number="014">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc014-1.ec0bc993.jpg')"></div>
+
+
+        <div class="elements elements-equip">
+            <div class="card-name">Escudo de Aegir</div>
+            <div class="card-cost">
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                            </div>
+        </div>
+
+        <div class="stats-equip">
+            <div class="name">Escudo de Aegir</div>
+            <div class="attack"><span class="equip-plus">+</span>0</div>
+            <div class="defense"><span class="equip-plus">+</span>2</div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-container skill-container-equip">
+
+                <div class="skill-traits text">
+                    [defender|defensor]&nbsp;
+                    
+                                                        </div>
+
+                <div class="skill-extra">
+                    <div class="skill-line">
+                        <div class="line">EXTRA</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Si la vida del [character|personaje] equipado baja a 1 o menos, este gana {invulnerable|invulnerable} hasta el final del turno. Su vida queda en 1.</div></div>
+                    <div class="skill-description"><div class="text">Si la vida del [character|personaje] equipado baja a 1 o menos, este gana {invulnerable|invulnerable} hasta el final del turno. Su vida queda en 1.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [equip|equipo]
+            OPEN CARD WARS OCW-BC014-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:f3UK5m4dTczD5Nao7ZQ2 -->                                                                <div wire:id="2zaxOkNSoJYlFFCo4DlG" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;2zaxOkNSoJYlFFCo4DlG&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;befd0bdd&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;015&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Bast\u00f3n de Noctavoris&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;equip&quot;,&quot;class&quot;:&quot;caster&quot;,&quot;cost&quot;:3,&quot;hp&quot;:0,&quot;atk&quot;:2,&quot;def&quot;:0,&quot;extra&quot;:{&quot;skills&quot;:[&quot;flash|destello&quot;],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;El da\u00f1o que hace el [character|personaje] equipado ignora la armadura y no puede ser reducido.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc015-1-es&quot;,&quot;type_text&quot;:&quot;equip|equipo&quot;,&quot;class_text&quot;:&quot;caster|mago&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;1fb61c24035d9ba9e4107566f61e5eabb8f1276cdf29710e9acbd1fec19f41a0&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc015-1-es"
+         data-number="015">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc015-1.c9ff4b75.jpg')"></div>
+
+
+        <div class="elements elements-equip">
+            <div class="card-name">Bastón de Noctavoris</div>
+            <div class="card-cost">
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                            </div>
+        </div>
+
+        <div class="stats-equip">
+            <div class="name">Bastón de Noctavoris</div>
+            <div class="attack"><span class="equip-plus">+</span>2</div>
+            <div class="defense"><span class="equip-plus">+</span>0</div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-container skill-container-equip">
+
+                <div class="skill-traits text">
+                    [caster|mago]&nbsp;
+                    
+                                                        </div>
+
+                <div class="skill-extra">
+                    <div class="skill-line">
+                        <div class="line">EXTRA</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">El daño que hace el [character|personaje] equipado ignora la armadura y no puede ser reducido.</div></div>
+                    <div class="skill-description"><div class="text">El daño que hace el [character|personaje] equipado ignora la armadura y no puede ser reducido.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [equip|equipo]
+            OPEN CARD WARS OCW-BC015-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:2zaxOkNSoJYlFFCo4DlG -->                                                                <div wire:id="mBNojYP05wmFDm2KZ0a8" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;mBNojYP05wmFDm2KZ0a8&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;13090ab2&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;016&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Sombra Quebravidas &quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;equip&quot;,&quot;class&quot;:&quot;assassin&quot;,&quot;cost&quot;:3,&quot;hp&quot;:0,&quot;atk&quot;:1,&quot;def&quot;:0,&quot;extra&quot;:{&quot;skills&quot;:[&quot;flash|destello&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Cuando ataque a un [character|personaje] de su misma l\u00ednea y cause da\u00f1o, puede {move|mover} inmediatamente a cualquier espacio vac\u00edo y realizar un segundo ataque.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc016-1-es&quot;,&quot;type_text&quot;:&quot;equip|equipo&quot;,&quot;class_text&quot;:&quot;assassin|asesino&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;a5a398621ce6d0f49a73f3f1c2730457a7f6044d89268ba6c70da6da2a82b682&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc016-1-es"
+         data-number="016">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc016-1.ac215d34.jpg')"></div>
+
+
+        <div class="elements elements-equip">
+            <div class="card-name">Sombra Quebravidas </div>
+            <div class="card-cost">
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                            </div>
+        </div>
+
+        <div class="stats-equip">
+            <div class="name">Sombra Quebravidas </div>
+            <div class="attack"><span class="equip-plus">+</span>1</div>
+            <div class="defense"><span class="equip-plus">+</span>0</div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-container skill-container-equip">
+
+                <div class="skill-traits text">
+                    [assassin|asesino]&nbsp;
+                    
+                                                        </div>
+
+                <div class="skill-extra">
+                    <div class="skill-line">
+                        <div class="line">EXTRA</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Cuando ataque a un [character|personaje] de su misma línea y cause daño, puede {move|mover} inmediatamente a cualquier espacio vacío y realizar un segundo ataque.</div></div>
+                    <div class="skill-description"><div class="text">Cuando ataque a un [character|personaje] de su misma línea y cause daño, puede {move|mover} inmediatamente a cualquier espacio vacío y realizar un segundo ataque.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [equip|equipo]
+            OPEN CARD WARS OCW-BC016-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:mBNojYP05wmFDm2KZ0a8 -->                                                                <div wire:id="TT93biht4L8J3tlxHgW5" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;TT93biht4L8J3tlxHgW5&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;4db383a0&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;017&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Garras de Brann-Korr&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;equip&quot;,&quot;class&quot;:&quot;fighter&quot;,&quot;cost&quot;:3,&quot;hp&quot;:0,&quot;atk&quot;:2,&quot;def&quot;:0,&quot;extra&quot;:{&quot;skills&quot;:[&quot;reach|alcance&quot;],&quot;cost&quot;:&quot;5+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Realiza un ataque con {trample|arrollar}. Si el ataque elimina a un enemigo, puede realizar un segundo ataque inmediatamente.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc017-1-es&quot;,&quot;type_text&quot;:&quot;equip|equipo&quot;,&quot;class_text&quot;:&quot;fighter|luchador&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;697503d67a2bf416e08b589093ba5333665602b93810782346441679189c0f65&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc017-1-es"
+         data-number="017">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc017-1.5ef4bcd4.jpg')"></div>
+
+
+        <div class="elements elements-equip">
+            <div class="card-name">Garras de Brann-Korr</div>
+            <div class="card-cost">
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                            </div>
+        </div>
+
+        <div class="stats-equip">
+            <div class="name">Garras de Brann-Korr</div>
+            <div class="attack"><span class="equip-plus">+</span>2</div>
+            <div class="defense"><span class="equip-plus">+</span>0</div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-container skill-container-equip">
+
+                <div class="skill-traits text">
+                    [fighter|luchador]&nbsp;
+                    
+                                                        </div>
+
+                <div class="skill-extra">
+                    <div class="skill-line">
+                        <div class="line">EXTRA</div>
+                        <div class="cost text">5+</div>
+                        <div class="skills text">
+                                                            {reach|alcance}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Realiza un ataque con {trample|arrollar}. Si el ataque elimina a un enemigo, puede realizar un segundo ataque inmediatamente.</div></div>
+                    <div class="skill-description"><div class="text">Realiza un ataque con {trample|arrollar}. Si el ataque elimina a un enemigo, puede realizar un segundo ataque inmediatamente.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [equip|equipo]
+            OPEN CARD WARS OCW-BC017-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:TT93biht4L8J3tlxHgW5 -->                                                                <div wire:id="eAtePqy7C0vIVYCDaruO" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;eAtePqy7C0vIVYCDaruO&quot;,&quot;name&quot;:&quot;card&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;cards&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;fad52d3d&quot;,&quot;data&quot;:{&quot;card&quot;:{&quot;set&quot;:&quot;bc&quot;,&quot;universe&quot;:&quot;ocw&quot;,&quot;number&quot;:&quot;018&quot;,&quot;version&quot;:1,&quot;name&quot;:{&quot;es&quot;:&quot;Campana de Eclipsia&quot;,&quot;en&quot;:&quot;&quot;},&quot;type&quot;:&quot;equip&quot;,&quot;class&quot;:&quot;support&quot;,&quot;cost&quot;:3,&quot;hp&quot;:0,&quot;atk&quot;:0,&quot;def&quot;:1,&quot;extra&quot;:{&quot;skills&quot;:[&quot;flash|destello&quot;],&quot;cost&quot;:&quot;4+&quot;,&quot;desc&quot;:{&quot;es&quot;:&quot;Aplica {silence|silencio} a un [character|personaje] enemigo que haya activado una habilidad este turno y anula su efecto. Luego, un [character|personaje] aliado de tu elecci\u00f3n gana {counterattack|contraataque} hasta el final del turno.&quot;,&quot;en&quot;:&quot;&quot;}},&quot;id&quot;:&quot;ocw-bc018-1-es&quot;,&quot;type_text&quot;:&quot;equip|equipo&quot;,&quot;class_text&quot;:&quot;support|soporte&quot;},&quot;lang&quot;:&quot;es&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;b054ea77b2bf5679f8aaf73c9f29e8d0d531861c5ce3b83b33f127acc25cb547&quot;}}">
+    <div class="card flex"
+         data-cardid="ocw-bc018-1-es"
+         data-number="018">
+
+        <div class="art" style="background-image: url('http://ocw.personal.com/build/assets/ocw-bc018-1.bc829222.jpg')"></div>
+
+
+        <div class="elements elements-equip">
+            <div class="card-name">Campana de Eclipsia</div>
+            <div class="card-cost">
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                            </div>
+        </div>
+
+        <div class="stats-equip">
+            <div class="name">Campana de Eclipsia</div>
+            <div class="attack"><span class="equip-plus">+</span>0</div>
+            <div class="defense"><span class="equip-plus">+</span>1</div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-container skill-container-equip">
+
+                <div class="skill-traits text">
+                    [support|soporte]&nbsp;
+                    
+                                                        </div>
+
+                <div class="skill-extra">
+                    <div class="skill-line">
+                        <div class="line">EXTRA</div>
+                        <div class="cost text">4+</div>
+                        <div class="skills text">
+                                                            {flash|destello}
+                                                    </div>
+                    </div>
+                    <div class="skill-description-back"><div class="text">Aplica {silence|silencio} a un [character|personaje] enemigo que haya activado una habilidad este turno y anula su efecto. Luego, un [character|personaje] aliado de tu elección gana {counterattack|contraataque} hasta el final del turno.</div></div>
+                    <div class="skill-description"><div class="text">Aplica {silence|silencio} a un [character|personaje] enemigo que haya activado una habilidad este turno y anula su efecto. Luego, un [character|personaje] aliado de tu elección gana {counterattack|contraataque} hasta el final del turno.</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardnumber text">
+            [equip|equipo]
+            OPEN CARD WARS OCW-BC018-1-ES</div>
+
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:eAtePqy7C0vIVYCDaruO -->                            
+            <div id="cards"></div>
+
+            <script>
+                function generateImages(e) {
+                    // Recorremos las cartas y generamos las imágenes
+                    let nodes = document.getElementsByClassName('card');
+                    Array.from(nodes).forEach((node) => {
+                        // Configuración
+                        let cardid   = node.getAttribute("data-cardid");
+                        let toImage = 1;
+
+                        // Si hay que generar las imagenes
+                        if (toImage === 1) {
+                            htmltoimage.toJpeg(node, {quality: 1})
+                                .then(function (dataUrl) {
+                                    let img = new Image();
+                                    img.src = dataUrl;
+
+                                    // Descarga de imagenes
+                                    img.onclick = function() {
+                                        let link = document.createElement('a');
+                                        link.download = cardid + '.jpg';
+                                        link.href = dataUrl;
+                                        link.click();
+                                    };
+
+                                    document.getElementById("cards").appendChild(img);
+                                    node.remove();
+                                })
+                                .catch(function (error) {
+                                    console.error('oops, something went wrong!', error);
+                                });
+                        }
+                    });
+                }
+            </script>
+
+        </main>
+
+        
+        <!-- Livewire Scripts -->
+
+<script src="/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false" >
+    if (window.livewire) {
+	    console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+	}
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '';
+    window.livewire_token = 'hrX35uVfv3IDOgIUC8jbWJyLMRhJrhdVk9nZebWS';
+
+	/* Make sure Livewire loads first. */
+	if (window.Alpine) {
+	    /* Defer showing the warning so it doesn't get buried under downstream errors. */
+	    document.addEventListener("DOMContentLoaded", function () {
+	        setTimeout(function() {
+	            console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\\n\\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+	        })
+	    });
+	}
+
+	/* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    let started = false;
+
+    window.addEventListener('alpine:initializing', function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+</script>
+    </body>
+
+</html>
+

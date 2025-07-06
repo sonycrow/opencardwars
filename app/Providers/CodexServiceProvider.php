@@ -28,7 +28,7 @@ class CodexServiceProvider extends ServiceProvider
         $cards = json_decode(Storage::disk('public')->get("ocw_codex.json"), true);
         foreach ($cards as $card)
         {
-            $card['id']    = strtolower("{$card['universe']}-{$card['set']}{$card['number']}-{$card['version']}-" . App::currentLocale());
+            $card['id']    = strtolower("{$card['universe']}-{$card['set']}{$card['number']}-{$card['version']}");
             $card['cost']  = $card['cost'] ?? self::getCost($card);
             self::$codex[] = $card;
         }

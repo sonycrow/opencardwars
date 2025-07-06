@@ -1,6 +1,6 @@
 <div>
     <div class="card flex"
-         data-cardid="{{ $card['id'] }}"
+         data-cardid="{{ $card['id'].'-'.$lang }}"
          data-number="{{ $card['number'] }}">
 
         <div class="art" style="background-image: url('{{ Vite::asset('resources/art/' . $card['universe'] . "/" . Str::lower($card['universe'] . '-' . $card['set'] . $card['number'] . '-' . $card['version']) . ".jpg") }}')"></div>
@@ -58,7 +58,7 @@
 
         <div class="cardnumber text">
             [{{ $card['type_text'] }}]
-            OPEN CARD WARS {{ Str::upper($card['id']) }}</div>
-
+            OPEN CARD WARS {{ Str::upper($card['id'].'-'.$lang) }}
+        </div>
     </div>
 </div>

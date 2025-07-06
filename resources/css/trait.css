@@ -3,7 +3,7 @@
 /*==============================*/
 span.skill,
 span.trait {
-    font-size: 25px;
+    font-size: 26px;
     line-height: 20px;
     font-family: "futura-bold", "serif";
     text-transform: uppercase;
@@ -37,7 +37,7 @@ span.trait-defender { background-color: #65440e; }
 span.trait-caster   { background-color: #1156d7; }
 span.trait-support  { background-color: #316b1e; }
 span.trait-fighter  { background-color: #a6a006; }
-span.trait-assassin { background-color: #6d098f; }
+span.trait-assassin { background-color: #43098f; }
 
 /*==============================*/
 /*       TRAITS ESPECIALES      */
