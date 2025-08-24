@@ -42,7 +42,7 @@
                 <div class="skill-extra">
                     <div class="skill-line">
                         <div class="line">EXTRA</div>
-                        <div class="cost text">{{ $card['extra']['cost'] }}</div>
+                        <div class="cost text">{{ $card['extra']['cost'] }}+</div>
                         <div class="skills text">
                             @foreach($card['extra']['skills'] as $skill)
                                 {{ '{' . $skill . '}' }}

@@ -17,7 +17,8 @@
         "skills": [],
         "vanguard": {
             "skills": [],
-            "cost": "2+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Gana +2#atk# hasta el final del turno.",
                 "en": ""
@@ -25,7 +26,8 @@
         },
         "center": {
             "skills": [],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Lanza un cono de flechas causando su daño de #atk# al primer objetivo de todas las líneas enemigas.",
                 "en": ""
@@ -33,9 +35,10 @@
         },
         "rearguard": {
             "skills": ["ultimate"],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Dispara una *flecha de hielo* a un objetivo de su misma línea, causando {triple damage} y aplicando {stun}.",
+                "es": "Dispara una *flecha de hielo* a un objetivo de su misma línea, causando {tripledamage} y aplicando {stun}.",
                 "en": ""
             }
         }
@@ -58,7 +61,7 @@
         "skills": [],
         "vanguard": {
             "skills": [],
-            "cost": "2+",
+            "cost": 0,
             "desc": {
                 "es": "Activa {shield 1} hasta el inicio de tu siguiente turno.",
                 "en": ""
@@ -66,7 +69,8 @@
         },
         "center": {
             "skills": [],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Obtiene +2#def# hasta el inicio de tu siguiente turno.",
                 "en": ""
@@ -74,7 +78,8 @@
         },
         "rearguard": {
             "skills": ["ultimate"],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Debe {advance 2}. Luego, obtiene +4#atk# y realiza un ataque {unstoppable} al primer objetivo de su misma línea.",
                 "en": ""
@@ -99,15 +104,17 @@
         "skills": [],
         "vanguard": {
             "skills": ["reach"],
-            "cost": "2+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Lanza una bola de energía a un objetivo de su misma línea que causa la mitad de su valor de #atk# a él y a todos los [character] adyacentes.",
+                "es": "Lanza una bola de energía a un objetivo de su línea que causa la mitad de su #atk# a él y los [character] adyacentes.",
                 "en": ""
             }
         },
         "center": {
             "skills": [],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Activa {prison} sobre el primer [character] enemigo de su misma línea hasta el inicio de su próximo turno.",
                 "en": ""
@@ -118,9 +125,10 @@
                 "ultimate",
                 "flash"
             ],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Invoca un portal y puede {move} a cualquier [character] adyacente a cualquier posición del campo de batalla (incluido él).",
+                "es": "Invoca un *portal* y puede {move} a cualquier [character] adyacentem, él incluido.",
                 "en": ""
             }
         }
@@ -143,17 +151,19 @@
         "skills": [],
         "vanguard": {
             "skills": ["flash"],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Realiza {heal 4} al [character] de su misma línea ubicado en retaguardia.",
+                "es": "Realiza {heal 2} al [character] de su misma línea ubicado en retaguardia.",
                 "en": ""
             }
         },
         "center": {
             "skills": ["flash"],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Realiza {heal 4} al [character] de su misma línea ubicado en vanguardia.",
+                "es": "Realiza {heal 2} al [character] de su misma línea ubicado en vanguardia.",
                 "en": ""
             }
         },
@@ -162,9 +172,10 @@
                 "ultimate",
                 "flash"
             ],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Realiza {heal 6} a un [character] aliado objetivo.",
+                "es": "Realiza {heal 4} a un [character] aliado objetivo.",
                 "en": ""
             }
         }
@@ -187,9 +198,10 @@
         "skills": [],
         "vanguard": {
             "skills": [],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Carga su *arma* y obtiene {double damage}.",
+                "es": "Carga su *arma* y obtiene {doubledamage}.",
                 "en": ""
             }
         },
@@ -198,7 +210,8 @@
                 "ultimate",
                 "flash"
             ],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Obtiene {dodge} y {counterattack} hasta el final del turno.",
                 "en": ""
@@ -206,7 +219,8 @@
         },
         "rearguard": {
             "skills": ["reach"],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Carga su *arma* y salta hacia un objetivo de su misma línea, obtienendo +2#atk#.",
                 "en": ""
@@ -231,15 +245,17 @@
         "skills": [],
         "vanguard": {
             "skills": ["ultimate"],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Se lanza contra un objetivo y le deja una marca. Obtiene {triple attack} en el objetivo marcado. ",
+                "es": "Se lanza contra un objetivo y le deja una marca. Obtiene {tripleattack} en el objetivo marcado. ",
                 "en": ""
             }
         },
         "center": {
             "skills": [],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Coloca una *sombra* en una posición vacía del campo enemigo y hace un corte circular causando su daño de #atk# a todos los [character] adyacentes.",
                 "en": ""
@@ -247,7 +263,8 @@
         },
         "rearguard": {
             "skills": [],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Cuando realiza un ataque, si este causa daño invoca una *sombra* que vuelve a realizar otro ataque al mismo objetivo.",
                 "en": ""
@@ -272,7 +289,8 @@
         "skills": [],
         "vanguard": {
             "skills": ["flash"],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Gana +2#atk# y realiza un ataque que causa {stun} a un objetivo de su misma línea.",
                 "en": ""
@@ -280,7 +298,8 @@
         },
         "center": {
             "skills": ["ultimate"],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Cuando realiza un ataque, si el objetivo muere puede ejecutar una habilidad que no sea {ultimate} de ese objetivo pagando su coste.",
                 "en": ""
@@ -288,7 +307,8 @@
         },
         "rearguard": {
             "skills": [],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Cuando realiza un ataque, gana {move} y puede volver a realizar otro ataque.",
                 "en": ""
@@ -313,7 +333,8 @@
         "skills": [],
         "vanguard": {
             "skills": ["ultimate"],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Convierte en piedra y causa {stun} y {poison 2} al primer personaje de todas las líneas enemigas.",
                 "en": ""
@@ -321,7 +342,8 @@
         },
         "center": {
             "skills": ["reach"],
-            "cost": "2+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Cuando realiza un ataque, causa {poison 1} al [character] objetivo.",
                 "en": ""
@@ -329,7 +351,8 @@
         },
         "rearguard": {
             "skills": ["reach"],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Causa {silence} y {poison 1} a todos los [character] de su misma línea.",
                 "en": ""
@@ -354,7 +377,8 @@
         "skills": [],
         "vanguard": {
             "skills": [],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Dispara una *bala* que atraviesa a todos los [character] de su misma línea. Distribuye el daño del ataque entre todos los objetivos como quieras.",
                 "en": ""
@@ -362,7 +386,8 @@
         },
         "center": {
             "skills": [],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Coloca una *Flor de Lotto* en un espacio enemigo vacío. Cuando un [character] entra en esa posición recibe 5 puntos de daño.",
                 "en": ""
@@ -373,9 +398,10 @@
                 "ultimate",
                 "reach"
             ],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Carga su *arma* y gana {triple attack}.",
+                "es": "Carga su *arma* y gana {tripleattack}.",
                 "en": ""
             }
         }
@@ -398,7 +424,8 @@
         "skills": [],
         "vanguard": {
             "skills": ["flash"],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Se sube a su *tridente* y gana {invulnerable} contra el ataque o habilidad que reciba.",
                 "en": ""
@@ -406,9 +433,10 @@
         },
         "center": {
             "skills": [],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
-                "es": "Carga su *tridente* y gana {double damage} e {unstoppable} en su próximo ataque.",
+                "es": "Carga su *tridente* y gana {doubledamage} e {unstoppable} en su próximo ataque.",
                 "en": ""
             }
         },
@@ -417,7 +445,8 @@
                 "ultimate",
                 "reach"
             ],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Invoca a un tiburón gigante y realiza un ataque en la ubicación de un objetivo y gana +2#atk#. Distribuye el daño como quieras entre el objetivo y todos los [character] adyacentes.",
                 "en": ""
@@ -442,7 +471,8 @@
         "skills": [],
         "vanguard": {
             "skills": [],
-            "cost": "2+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Obtiene {shield 1} y gana +1#def# hasta el inicio de tu siguiente turno.",
                 "en": ""
@@ -450,7 +480,8 @@
         },
         "center": {
             "skills": [],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Obtiene {taunt} y gana +2#def# hasta el inicio de tu siguiente turno.",
                 "en": ""
@@ -458,7 +489,8 @@
         },
         "rearguard": {
             "skills": ["ultimate"],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Libera una onda de choque en un objetivo causando {stun}. Luego causa su daño de #atk# a todos los [character] adyacentes, incluido el objetivo.",
                 "en": ""
@@ -483,7 +515,8 @@
         "skills": [],
         "vanguard": {
             "skills": ["flash"],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Realiza {heal 2} a un [character] aliado y le otorga {dodge} hasta el final del turno.",
                 "en": ""
@@ -491,7 +524,8 @@
         },
         "center": {
             "skills": ["reach"],
-            "cost": "3+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Causa {silence} a un [character] enemigo de su misma línea y reduce su #atk# en 2 hasta el final del turno.",
                 "en": ""
@@ -502,7 +536,8 @@
                 "ultimate",
                 "flash"
             ],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Realiza {heal 4} a un [character] aliado y gana +2#atk# y +2#def#, hasta el final del turno.",
                 "en": ""
@@ -529,7 +564,8 @@
                 "reach",
                 "flash"
             ],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Causa la mitad del daño a todos los [character] adyacentes al objetivo atacado.",
                 "en": ""
@@ -553,7 +589,8 @@
         "def": 2,
         "extra": {
             "skills": ["flash"],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Si la vida del [character] equipado baja a 1 o menos, este gana {invulnerable} hasta el final del turno. Su vida queda en 1.",
                 "en": ""
@@ -577,7 +614,8 @@
         "def": 0,
         "extra": {
             "skills": ["flash"],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "El daño que hace el [character] equipado ignora la armadura y no puede ser reducido.",
                 "en": ""
@@ -601,7 +639,8 @@
         "def": 0,
         "extra": {
             "skills": ["flash"],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Cuando ataque a un [character] de su misma línea y cause daño, puede {move} inmediatamente a cualquier espacio vacío y realizar un segundo ataque.",
                 "en": ""
@@ -625,7 +664,8 @@
         "def": 0,
         "extra": {
             "skills": ["reach"],
-            "cost": "5+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Realiza un ataque con {trample}. Si el ataque elimina a un enemigo, puede realizar un segundo ataque inmediatamente.",
                 "en": ""
@@ -649,9 +689,598 @@
         "def": 1,
         "extra": {
             "skills": ["flash"],
-            "cost": "4+",
+            "cost": 0,
+            "modifier": 0,
             "desc": {
                 "es": "Aplica {silence} a un [character] enemigo que haya activado una habilidad este turno y anula su efecto. Luego, un [character] aliado de tu elección gana {counterattack} hasta el final del turno.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "019",
+        "version": 1,
+        "name": {
+            "es": "Kaelen",
+            "en": ""
+        },
+        "subname": {
+            "es": "La Sombra Susurrante",
+            "en": ""
+        },
+        "type": "character",
+        "class": "assassin",
+        "hp": 11,
+        "atk": 5,
+        "def": 0,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Gana {move} y puede moverse a una posición vacía de la retaguardia.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Aplica {poison 2} al primer enemigo en su línea.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["ultimate"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Debe {advance 2}. Luego, gana {unstoppable} y {doubledamage}.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "020",
+        "version": 1,
+        "name": {
+            "es": "Xylia",
+            "en": ""
+        },
+        "subname": {
+            "es": "La Viuda Pálida",
+            "en": ""
+        },
+        "type": "character",
+        "class": "assassin",
+        "hp": 12,
+        "atk": 4,
+        "def": 1,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["ultimate"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Inyecta un veneno paralizante a un objetivo en su línea. El objetivo recibe {poison 3} y {stun}.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Lanza una red de veneno. Aplica {poison 1} a todos los [character] enemigos de su línea.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["reach"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Realiza un ataque que aplica {poison 2} a un objetivo en su línea.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "021",
+        "version": 1,
+        "name": {
+            "es": "Valerius",
+            "en": ""
+        },
+        "subname": {
+            "es": "El Tejedor del Tiempo",
+            "en": ""
+        },
+        "type": "character",
+        "class": "caster",
+        "hp": 13,
+        "atk": 3,
+        "def": 1,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["flash"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Gana {dodge} contra el siguiente ataque o habilidad que lo tenga como objetivo.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": ["ultimate"],
+            "cost": 0,
+            "modifier": 8,
+            "desc": {
+                "es": "Elige una línea. Los [character] en esa línea no pueden atacar ni mover hasta el inicio de tu siguiente turno. Aún pueden activar habilidades.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["flash"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Lanza un orbe temporal al primer enemigo de su línea, causándole {stun}.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "022",
+        "version": 1,
+        "name": {
+            "es": "Borin",
+            "en": ""
+        },
+        "subname": {
+            "es": "El Puño de Granito",
+            "en": ""
+        },
+        "type": "character",
+        "class": "caster",
+        "hp": 15,
+        "atk": 2,
+        "def": 3,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["ultimate"],
+            "cost": 0,
+            "modifier": 2,
+            "desc": {
+                "es": "Crea una fisura en una línea enemiga objetivo. Causa su daño de #atk# y aplica {prison} a todos los personajes en esa línea hasta el inicio de tu siguiente turno.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Golpea el suelo, causando su daño de #atk# al primer enemigo de su línea y a todos los que estén en diagonal a este.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Obtiene {shield 1} y +2#def# hasta el inicio de tu siguiente turno.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "023",
+        "version": 1,
+        "name": {
+            "es": "Cyra",
+            "en": ""
+        },
+        "subname": {
+            "es": "El Ojo del Futuro",
+            "en": ""
+        },
+        "type": "character",
+        "class": "marksman",
+        "hp": 12,
+        "atk": 4,
+        "def": 1,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Dispara un pulso electromagnético. No causa daño, pero reduce la #def# del primer enemigo en su línea en 2 hasta el final del turno.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": ["reach"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Realiza un ataque estándar a cualquier objetivo de su línea.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [
+                "ultimate",
+                "reach"
+            ],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Carga su rifle. Gana {unstoppable} y {tripledamage} para su próximo ataque de este turno.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "024",
+        "version": 1,
+        "name": {
+            "es": "Fenrir",
+            "en": ""
+        },
+        "subname": {
+            "es": "El Cazador Feral",
+            "en": ""
+        },
+        "type": "character",
+        "class": "marksman",
+        "hp": 13,
+        "atk": 3,
+        "def": 1,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Su lobo realiza un ataque de 3 de daño al primer enemigo y luego Fenrir gana {move} a la posición de retaguardia si está vacía.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Él y su lobo atacan al mismo objetivo. Gana {double attack}.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [
+                "ultimate",
+                "reach"
+            ],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Desata la furia de su compañero. Gana +2#atk# y {trample} para su próximo ataque de este turno.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "025",
+        "version": 1,
+        "name": {
+            "es": "Aegis",
+            "en": ""
+        },
+        "subname": {
+            "es": "El Baluarte Dorado",
+            "en": ""
+        },
+        "type": "character",
+        "class": "defender",
+        "hp": 20,
+        "atk": 1,
+        "def": 3,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["ultimate"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Activa {indestructible} sobre sí mismo hasta el final del turno del oponente. Adicionalmente, todos los demás personajes aliados ganan +2#def# durante el mismo periodo.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Activa {taunt} hasta el inicio de tu siguiente turno.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["flash"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Activa {redirection}. Elige a un personaje aliado. El próximo daño que fuera a recibir ese aliado, lo recibe Aegis en su lugar.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "026",
+        "version": 1,
+        "name": {
+            "es": "Kresh",
+            "en": ""
+        },
+        "subname": {
+            "es": "El Devorador de Magia",
+            "en": ""
+        },
+        "type": "character",
+        "class": "defender",
+        "hp": 18,
+        "atk": 2,
+        "def": 2,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Gana {reflection}. El primer ataque de habilidad que reciba este turno es anulado, y el atacante recibe 3 de daño.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": ["ultimate"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Devora toda la magia del campo. Elimina todos los efectos y marcadores de estado de TODOS los personajes. Por cada efecto eliminado, Kresh gana +1#atk# hasta el final del turno y realiza un ataque.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Emite un pulso antimagia. Aplica {silence} al primer enemigo de cada línea.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "027",
+        "version": 1,
+        "name": {
+            "es": "Raiden",
+            "en": ""
+        },
+        "subname": {
+            "es": "El Puño de la Tormenta",
+            "en": ""
+        },
+        "type": "character",
+        "class": "fighter",
+        "hp": 16,
+        "atk": 3,
+        "def": 2,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Obtiene {counterattack} hasta el inicio de tu próximo turno.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Realiza un ataque con {trample} al primer enemigo de su línea.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [
+                "ultimate",
+                "reach"
+            ],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Salta a cualquier posición vacía del campo de batalla y desata una explosión de rayos, causando 4 de daño a todos los personajes adyacentes a su nueva posición.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "028",
+        "version": 1,
+        "name": {
+            "es": "Morlana",
+            "en": ""
+        },
+        "subname": {
+            "es": "La Reina de Espadas",
+            "en": ""
+        },
+        "type": "character",
+        "class": "fighter",
+        "hp": 15,
+        "atk": 4,
+        "def": 1,
+        "traits": ["physical dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Realiza un ataque. Si este ataque derrota a un personaje, gana {move} y puede realizar un segundo ataque a otro objetivo válido.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": ["ultimate"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Invoca espadas fantasmales. Realiza un ataque completo contra el primer personaje de cada línea enemiga.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Adopta una postura defensiva. Gana +2#def# y {counterattack} hasta el inicio de tu próximo turno.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "029",
+        "version": 1,
+        "name": {
+            "es": "Lyra",
+            "en": ""
+        },
+        "subname": {
+            "es": "La Voz del Alba",
+            "en": ""
+        },
+        "type": "character",
+        "class": "support",
+        "hp": 14,
+        "atk": 1,
+        "def": 2,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": ["flash"],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Elige a un personaje aliado. Ese personaje gana +3#def# hasta el inicio de tu siguiente turno.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Realiza {heal 3} a todos los personajes aliados en su misma línea.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": [
+                "ultimate",
+                "flash"
+            ],
+            "cost": 0,
+            "modifier": 0,
+            "desc": {
+                "es": "Entona el Himno del Alba. Realiza {heal 5} a un único aliado objetivo y este gana {invulnerable} hasta el inicio de tu siguiente turno.",
+                "en": ""
+            }
+        }
+    },
+    {
+        "set": "bc",
+        "universe": "ocw",
+        "number": "030",
+        "version": 1,
+        "name": {
+            "es": "Krekk",
+            "en": ""
+        },
+        "subname": {
+            "es": "El Alquimista Goblin",
+            "en": ""
+        },
+        "type": "character",
+        "class": "support",
+        "hp": 13,
+        "atk": 2,
+        "def": 1,
+        "traits": ["magic dmg"],
+        "skills": [],
+        "vanguard": {
+            "skills": [],
+            "cost": 0,
+            "modifier": -3,
+            "desc": {
+                "es": "Lanza una poción inestable al primer enemigo de su línea y recibe {poison 1} y {stun}.",
+                "en": ""
+            }
+        },
+        "center": {
+            "skills": [],
+            "cost": 0,
+            "modifier": -1,
+            "desc": {
+                "es": "Lanza una poción de furia a un aliado objetivo, otorgándole +4#atk# hasta el final del turno.",
+                "en": ""
+            }
+        },
+        "rearguard": {
+            "skills": ["ultimate"],
+            "cost": 0,
+            "modifier": 2,
+            "desc": {
+                "es": "Elige una: todos los aliados ganan +2#atk# hasta el final del turno, o todos los enemigos reciben 2 de daño directo.",
                 "en": ""
             }
         }

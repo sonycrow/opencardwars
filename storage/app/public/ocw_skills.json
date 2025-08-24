@@ -1,6 +1,7 @@
 [
     {
         "code": "advance x",
+        "power": 1,
         "name": {
             "en": "advance x",
             "es": "avanzar x"
@@ -12,6 +13,7 @@
     },
     {
         "code": "shield x",
+        "power": 3,
         "name": {
             "en": "shield x",
             "es": "escudo x"
@@ -23,6 +25,7 @@
     },
     {
         "code": "prison",
+        "power": 3,
         "name": {
             "en": "prison",
             "es": "prisión"
@@ -34,6 +37,7 @@
     },
     {
         "code": "move",
+        "power": 3,
         "name": {
             "en": "move",
             "es": "mover"
@@ -45,6 +49,7 @@
     },
     {
         "code": "heal x",
+        "power": 1,
         "name": {
             "en": "heal x",
             "es": "curar x"
@@ -55,7 +60,8 @@
         }
     },
     {
-        "code": "double damage",
+        "code": "doubledamage",
+        "power": 4,
         "name": {
             "en": "double damage",
             "es": "doble daño"
@@ -66,7 +72,8 @@
         }
     },
     {
-        "code": "triple damage",
+        "code": "tripledamage",
+        "power": 5,
         "name": {
             "en": "triple damage",
             "es": "triple daño"
@@ -77,7 +84,8 @@
         }
     },
     {
-        "code": "double attack",
+        "code": "doubleattack",
+        "power": 4,
         "name": {
             "en": "double attack",
             "es": "doble ataque"
@@ -88,7 +96,8 @@
         }
     },
     {
-        "code": "triple attack",
+        "code": "tripleattack",
+        "power": 5,
         "name": {
             "en": "triple attack",
             "es": "triple ataque"
@@ -100,6 +109,7 @@
     },
     {
         "code": "dodge",
+        "power": 2,
         "name": {
             "en": "dodge",
             "es": "esquiva"
@@ -111,6 +121,7 @@
     },
     {
         "code": "ultimate",
+        "power": 0,
         "name": {
             "en": "ultimate",
             "es": "definitiva"
@@ -122,6 +133,7 @@
     },
     {
         "code": "reach",
+        "power": 2,
         "name": {
             "en": "reach",
             "es": "alcance"
@@ -133,6 +145,7 @@
     },
     {
         "code": "flash",
+        "power": 0,
         "name": {
             "en": "flash",
             "es": "destello"
@@ -144,6 +157,7 @@
     },
     {
         "code": "counterattack",
+        "power": 3,
         "name": {
             "en": "counterattack",
             "es": "contraataque"
@@ -155,6 +169,7 @@
     },
     {
         "code": "unstoppable",
+        "power": 4,
         "name": {
             "en": "unstoppable",
             "es": "imparable"
@@ -166,6 +181,7 @@
     },
     {
         "code": "invulnerable",
+        "power": 5,
         "name": {
             "en": "invulnerable",
             "es": "invulnerable"
@@ -177,6 +193,7 @@
     },
     {
         "code": "stun",
+        "power": 4,
         "name": {
             "en": "stun",
             "es": "aturdir"
@@ -188,6 +205,7 @@
     },
     {
         "code": "haste",
+        "power": 2,
         "name": {
             "en": "haste",
             "es": "prisa"
@@ -199,6 +217,7 @@
     },
     {
         "code": "indestructible",
+        "power": 3,
         "name": {
             "en": "indestructible",
             "es": "indestructible"
@@ -210,6 +229,7 @@
     },
     {
         "code": "taunt",
+        "power": 3,
         "name": {
             "en": "taunt",
             "es": "provocar"
@@ -221,6 +241,7 @@
     },
     {
         "code": "trample",
+        "power": 2,
         "name": {
             "en": "trample",
             "es": "arrollar"
@@ -232,6 +253,7 @@
     },
     {
         "code": "regeneration",
+        "power": 3,
         "name": {
             "en": "regeneration",
             "es": "regeneración"
@@ -243,6 +265,7 @@
     },
     {
         "code": "redirection",
+        "power": 2,
         "name": {
             "en": "redirection",
             "es": "redirección"
@@ -254,6 +277,7 @@
     },
     {
         "code": "reflection",
+        "power": 2,
         "name": {
             "en": "reflection",
             "es": "reflejo"
@@ -265,6 +289,7 @@
     },
     {
         "code": "poison x",
+        "power": 2,
         "name": {
             "en": "poison x",
             "es": "veneno x"
@@ -276,6 +301,7 @@
     },
     {
         "code": "silence",
+        "power": 3,
         "name": {
             "en": "silence",
             "es": "silencio"
