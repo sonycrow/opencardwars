@@ -82,7 +82,7 @@ class TableCodex extends Component
         {
             $element['code']  = $element['id'];
             $element['name']  = CodexServiceProvider::getName($element['id'], App::currentLocale());
-            $element['image'] = "img:" . Vite::asset("resources/card/{$element['universe']}/{$element['id']}.jpg") . ",w:64";
+            $element['image'] = "img:" . Vite::asset("resources/card/{$element['universe']}/{$element['id']}-" . App::currentLocale() . ".jpg") . ",w:64";
 
             $vname = isset($element['vanguard'])  ? $element['vanguard']['skills']  : null;
             $cname = isset($element['center'])    ? $element['center']['skills']    : null;
